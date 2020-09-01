@@ -1,4 +1,43 @@
-h1 {
-    color: #292727;
-    text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400");
+
+.fp-auto-height.fp-section, .fp-auto-height .fp-slide, .fp-auto-height .fp-tableCell {
+    height: auto !important
+}
+
+.fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide, .fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important
+}
+/*
+
+.section.section-1 h1{
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.section.section-2 h1{
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.section.section-3 h1{
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.section.section-4 h1{
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.section.active h1{
+    opacity:1;
+    transform: translateX(0);
+}
+*/
+
+.section.section-3 {
+    z-index: 2;
 }
