@@ -13,19 +13,16 @@ export const ContactSection = styled.div`
         input[type=checkbox]+span:before, 
         input[type=radio]+span:before {
             content: "";
-            border-radius: 1px;
-            border: 1px solid #bbb;
+            border: 1px solid #fff;
             width: 22px;
             height: 22px;
             display: block;
             transition: all .5s ease-in-out;
             margin-right: 10px;
-            box-shadow: inset 0 0 0 2px #fff;
+            box-shadow: inset 0 0 0 1px #fff;
             flex: 0 0 22px;
             position: absolute;
             left: 0;
-            
-            
         }
         
         input[type=checkbox]+span, 
@@ -36,7 +33,6 @@ export const ContactSection = styled.div`
             font-weight: 500;
             line-height: 1.5;
             font-weight: 400;
-            margin-right: 30px;
             padding-left: 30px;
             position: relative;
         }
@@ -44,7 +40,7 @@ export const ContactSection = styled.div`
         input[type=checkbox]:checked+span:before,
         input[type=radio]:checked+span:before {
             box-shadow: inset 0 0 0 6px #fff;
-            background: #000;
+            background: #fff;
         }
         
         .ao-form-label, .ao-combo-label {
@@ -94,11 +90,14 @@ export const ContactSection = styled.div`
                     &:nth-child(1) .ao-combo-layout {
                         display: flex;
                     }
-                    &:nth-child(2) .ao-combo-layout {
+                }
+                    .ao-block-wrapper:nth-child(2) .ao-combo-layout {
                         display: flex;
                         flex-direction: column;
+                        .ao-combo-label {
+                            margin-bottom: 24px;
+                        }
                     }
-                }
     
     
     
