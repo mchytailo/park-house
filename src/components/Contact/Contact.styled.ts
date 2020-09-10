@@ -113,19 +113,11 @@ export const ContactSection = styled.div`
             }
             
             button.ao-form-submit {
-                border: 3px solid #FFFFFF;
                 font: normal normal normal 28px/28px Optima;
                 letter-spacing: 7.39px;
-                color: #FFFFFF;
                 text-transform: uppercase;
-                padding: 20px 100px;
-                border: none;
                 transition: .2s;
                 
-                &:hover {
-                    color: rgb(158, 166, 156);
-                    background: white;
-                }
             }
         
         }

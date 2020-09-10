@@ -10,7 +10,6 @@ const Contact: FC = () => {
             </ContactText>
 
             <ContactLine/>
-
             <script type="text/javascript" id="aoform-script-0ea0194e-db01-4ec2-81d1-4f0f8550f840:d-0001">
                 {
                     !function (o, t, e, a) {
