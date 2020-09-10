@@ -7,6 +7,44 @@ export const ContactSection = styled.div`
     background: #9EA69C;
 
     .ao-form {
+        input[type=checkbox], input[type=radio] {
+            display: none;
+        }
+        input[type=checkbox]+span:before, 
+        input[type=radio]+span:before {
+            content: "";
+            border-radius: 1px;
+            border: 1px solid #bbb;
+            width: 22px;
+            height: 22px;
+            display: block;
+            transition: all .5s ease-in-out;
+            margin-right: 10px;
+            box-shadow: inset 0 0 0 2px #fff;
+            flex: 0 0 22px;
+            position: absolute;
+            left: 0;
+        }
+        
+        input[type=checkbox]+span, 
+        input[type=radio]+span {
+            display: block;
+            font-family: OptimaNormal,sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-right: 30px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        input[type=checkbox]:checked+span:before,
+        input[type=radio]:checked+span:before {
+            box-shadow: inset 0 0 0 6px #fff;
+            background: #000;
+        }
+        
         .ao-form-label, .ao-combo-label {
             text-align: left;
             font: normal normal bold 18px/24px OptimaNormal;
@@ -19,7 +57,7 @@ export const ContactSection = styled.div`
         }
         
         .ao-column-inner{
-            padding: 0 60px 0 0;
+            padding: 0 60px 0 0 !important;
         }
         
         .ao-form-field {
@@ -33,7 +71,7 @@ export const ContactSection = styled.div`
         }
         
         .ao-row:nth-child(1) {
-            .ao-column:nth-child(3).ao-column-inner {
+            .ao-column:nth-child(3) .ao-column-inner {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
