@@ -14,14 +14,54 @@ export const ContactSection = styled.div`
             color: #fff;
             text-transform: uppercase;
         }
+        .ao-form-label {
+            margin-bottom: 8px;
+        }
         
         .ao-column-inner{
             padding: 0 60px 0 0;
         }
         
         .ao-form-field {
-            height: 80px;
+            background: #889287 !important;
+            border: none;
+            border-radius: 0 !important;
+            padding: 20px !important;
+            font: normal normal normal 24px/30px OptimaNormal !important;
+            letter-spacing: 2px;
+            color: white;
         }
+        
+        .ao-row:nth-child(1) {
+            .ao-column:nth-child(3){
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .ao-combo-block {
+                    .ao-form-label {
+                        margin-bottom: 24px;
+                    }
+                    .ao-combo-label {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 35px;
+                        
+                        input{
+                            margin: 0 8px 0 0;
+                        }
+                    }
+                    
+                    &:nth-child(1) .ao-combo-layout {
+                        display: flex;
+                    }
+                }
+    
+    
+    
+            }
+        }
+        
+        
     }
     `
 export const ContactText = styled.div`  
