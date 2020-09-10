@@ -33,7 +33,7 @@ export const ContactSection = styled.div`
         }
         
         .ao-row:nth-child(1) {
-            .ao-column:nth-child(3){
+            .ao-column:nth-child(3).ao-column-inner {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -53,6 +53,10 @@ export const ContactSection = styled.div`
                     
                     &:nth-child(1) .ao-combo-layout {
                         display: flex;
+                    }
+                    &:nth-child(2) .ao-combo-layout {
+                        display: flex;
+                        flex-direction: column;
                     }
                 }
     
