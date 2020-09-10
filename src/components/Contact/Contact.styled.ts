@@ -24,6 +24,8 @@ export const ContactSection = styled.div`
             flex: 0 0 22px;
             position: absolute;
             left: 0;
+            
+            
         }
         
         input[type=checkbox]+span, 
