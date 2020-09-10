@@ -90,14 +90,16 @@ export const ContactSection = styled.div`
                         display: flex;
                     }
                 }
-                    .ao-block-wrapper:nth-child(2) .ao-combo-layout {
-                        display: flex;
-                        flex-direction: column;
-                        .ao-combo-label {
-                            margin-bottom: 24px;
-                        }
+                .ao-block-wrapper:nth-child(2) .ao-combo-layout {
+                    display: flex;
+                    flex-direction: column;
+                    .ao-combo-label {
+                        margin-bottom: 24px;
                     }
-    
+                }
+                .ao-combo-layout {
+                    outline: none;
+                }
     
     
             }
@@ -113,11 +115,11 @@ export const ContactSection = styled.div`
             }
             
             button.ao-form-submit {
-                font: normal normal normal 28px/28px Optima;
+                font: normal normal normal 28px/28px OptimaNormal;
                 letter-spacing: 7.39px;
                 text-transform: uppercase;
                 transition: .2s;
-                
+                outline: none;  
             }
         
         }
