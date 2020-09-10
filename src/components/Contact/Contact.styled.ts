@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ContactSection = styled.div`  
-
-    min-height: 100vh;
     padding: 80px 100px;
     background: #9EA69C;
 
@@ -35,11 +33,12 @@ export const ContactSection = styled.div`
             font-weight: 400;
             padding-left: 30px;
             position: relative;
+            cursor: pointer;
         }
         
         input[type=checkbox]:checked+span:before,
         input[type=radio]:checked+span:before {
-            box-shadow: inset 0 0 0 6px #fff;
+            box-shadow: inset 0 0 0 6px rgb(158, 166, 156);
             background: #fff;
         }
         
@@ -105,6 +104,31 @@ export const ContactSection = styled.div`
         }
         
         
+        
+        .ao-submit-block{
+            margin-top: 60px;
+           
+            > div {
+                text-align: left !important;
+            }
+            
+            button.ao-form-submit {
+                border: 3px solid #FFFFFF;
+                font: normal normal normal 28px/28px Optima;
+                letter-spacing: 7.39px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                padding: 20px 100px;
+                border: none;
+                transition: .2s;
+                
+                &:hover {
+                    color: rgb(158, 166, 156);
+                    background: white;
+                }
+            }
+        
+        }
     }
     `
 export const ContactText = styled.div`  
