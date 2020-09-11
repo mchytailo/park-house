@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const ContentBackgroundSection = styled.div`
     height: 100vh;
     background: white;
-    
-    position: ${props => props.progress > 0 ? 'fixed' : 'relative'};
     top:0;
     left: 0;
     right: 0;

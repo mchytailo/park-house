@@ -40,7 +40,9 @@ const App: FC = () => {
                        duration={'90%'}
                 >
                             <div>
-                                <MainBuilding progress={contentMainState}/>
+                                <MainBuilding progress={contentMainState}
+                                nextProgress={contentSecondState}
+                                />
                             </div>
                 </Scene>
 
@@ -52,8 +54,9 @@ const App: FC = () => {
                         return contentSecondState<1 && (
                             <div>
                                 <ContentBackgroundSection
-                                    progress={progress}
-                                    nextProgress={contentSecondState}
+                                    style={{
+                                        position: progress > 0  ? 'fixed' : 'relative'
+                                    }}
                                 />
                             </div>
                         ) || <div/>

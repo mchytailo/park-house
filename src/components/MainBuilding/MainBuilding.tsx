@@ -3,9 +3,14 @@ import {MainBuildingImg, MainBuildingSection} from "./MainBuilding.styled";
 import contentImage from "../../assets/images/main-building.png";
 import contentImage2 from "../../assets/images/main-building2.png";
 
-const MainBuilding: FC = ({progress}) => {
+const MainBuilding: FC = ({progress,nextProgress}) => {
     return (
-        <MainBuildingSection>
+        <MainBuildingSection
+            style={{
+                position: progress === 1  ? 'fixed' : 'relative',
+                visibility: nextProgress === 0 ? 'visible' : 'hidden'
+            }}
+        >
             <MainBuildingImg
                 src={contentImage}
                 alt=""
