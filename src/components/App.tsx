@@ -15,6 +15,7 @@ import Footer from "./Footer/Footer";
 const App: FC = () => {
     const [contentSecondState, setContentSecondState] = useState(0)
     const [contentThirdState, setContentThirdState] = useState(0)
+    const [contentMainState, setContentMainState] = useState(0)
 
     return (
         <div className={'scrollmagic-container'}>
@@ -26,6 +27,7 @@ const App: FC = () => {
                     triggerHook={'onLeave'}
                 >
                     {progress => {
+                        setContentMainState(progress)
                         return (
                             <div>
                                 <Main progress={progress}/>
@@ -37,9 +39,9 @@ const App: FC = () => {
                        triggerHook={'onLeave'}
                        duration={'90%'}
                 >
-                    <div>
-                        <MainBuilding/>
-                    </div>
+                            <div>
+                                <MainBuilding progress={contentMainState}/>
+                            </div>
                 </Scene>
 
                 <Scene

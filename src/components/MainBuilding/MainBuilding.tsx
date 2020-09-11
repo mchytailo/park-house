@@ -1,11 +1,25 @@
 import React, {FC} from 'react';
 import {MainBuildingImg, MainBuildingSection} from "./MainBuilding.styled";
-import contentImage from "../../assets/images/Example.png";
+import contentImage from "../../assets/images/main-building.png";
+import contentImage2 from "../../assets/images/main-building2.png";
 
-const MainBuilding: FC = () => {
+const MainBuilding: FC = ({progress}) => {
     return (
         <MainBuildingSection>
-            <MainBuildingImg src={contentImage} alt=""/>
+            <MainBuildingImg
+                src={contentImage}
+                alt=""
+                style={{
+                    opacity: String(1 - progress)
+                }}
+            />
+            <MainBuildingImg
+                src={contentImage2}
+                alt=""
+                style={{
+                    opacity: String(progress)
+                }}
+            />
         </MainBuildingSection>)
 
 }

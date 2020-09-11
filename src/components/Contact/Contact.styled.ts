@@ -125,6 +125,7 @@ export const ContactSection = styled.div`
                 padding: 20px 100px !important;
                 background: rgb(158, 166, 156) !important;
                 border: 3px solid white !important;
+                color: white;
                 &:hover{
                     background: white !important;
                     color: rgb(158, 166, 156) !important

@@ -9,5 +9,8 @@ export const MainBuildingImg = styled.img`
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 120%;
+    min-height: 200%;
+    width: 100%;
+    pointer-events: none;
+    transition: .2s;
     `

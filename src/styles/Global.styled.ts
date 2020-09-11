@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   .scrollmagic-container .scrollmagic-pin-spacer:nth-child(1){
       padding-top: 0 !important;
       padding-bottom: 0 !important;
+      z-index: 1;
   }
 `;
 
