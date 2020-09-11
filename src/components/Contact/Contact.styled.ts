@@ -134,8 +134,10 @@ export const ContactSection = styled.div`
         }
 
         .ao-form-error-message {
-            font: normal normal normal 24px/28px OptimaNormal !important;
             text-align: right;
+            font: 16px / 20px OptimaNormal !important;
+            letter-spacing: 1px;
+            margin-top: 4px;
         }
     }
     `
