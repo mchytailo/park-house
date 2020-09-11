@@ -2,8 +2,7 @@ import React, {FC} from 'react';
 import {
     ContentFirstBlock,
     ContentFirstImage,
-    ContentFirstImageBlock,
-    ContentFirstSection,
+    ContentFirstImageBlock, ContentFirstImageBlockWall,
     ContentFirstText,
     ContentFirstTextBlock
 } from "./ContentFirst.styled";
@@ -11,9 +10,14 @@ import contentFirst from "../../assets/images/ContentFirst.png";
 import {Tween} from "react-gsap";
 
 const ContentFirst: FC = ({currentProgress, nextProgress}) => {
-    // console.log('progress', progress);
+    console.log(currentProgress);
     return (
-        <ContentFirstBlock>
+        <ContentFirstBlock
+            style={{
+                visibility: nextProgress < 1
+                    ? 'visible'
+                    : 'hidden'
+            }}>
             <Tween
                 from={{opacity: 0}}
                 to={{opacity: 1}}
@@ -21,8 +25,11 @@ const ContentFirst: FC = ({currentProgress, nextProgress}) => {
                 totalProgress={currentProgress}
             >
                 <ContentFirstTextBlock
-                    currentProgress={currentProgress}
-                    nextProgress={nextProgress}
+                    style={{
+                        opacity: currentProgress === 1
+                            ? String(1 - nextProgress) + ' !important'
+                            : ''
+                    }}
                 >
                     <ContentFirstText>
                         Lorem ipsum dolor sit amet, consectetur
@@ -36,9 +43,24 @@ const ContentFirst: FC = ({currentProgress, nextProgress}) => {
                 totalProgress={currentProgress}
             >
                 <ContentFirstImageBlock
-                    currentProgress={currentProgress}
-                    nextProgress={nextProgress}>
-                    <ContentFirstImage src={contentFirst}/>
+                >
+                    <ContentFirstImageBlockWall
+                        style={{
+                            left: currentProgress === 1 && nextProgress !== 1
+                                ? String((1 - nextProgress) * 100) + '%'
+                                : '',
+                            opacity: currentProgress === 1 && nextProgress !== 1
+                                ? String( nextProgress)
+                                : ''
+                        }}
+                    />
+                    <ContentFirstImage src={contentFirst}
+                                       style={{
+                                           opacity: currentProgress === 1
+                                               ? String(1 - nextProgress)
+                                               : ''
+                                       }}
+                    />
                 </ContentFirstImageBlock>
             </Tween>
 
