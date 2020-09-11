@@ -13,6 +13,25 @@ height: 450px;
 overflow: hidden;
     align-items: center;
     display: flex;
+    position: relative;
+    
+&:after {
+        content: '';
+        display: block;
+        background: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: ${
+    props =>{
+        if(props.currentProgress > 0){
+            return String((props.currentProgress) * 100) + '%'
+        }
+
+    }
+}; 
+    }
     `
 export const ContentThirdSection = styled.div`
     width: 50%;

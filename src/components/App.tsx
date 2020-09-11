@@ -10,6 +10,7 @@ import ContentSecond from "./ContentSecond/ContentSecond";
 import ContentThird from "./ContentThird/ContentThird";
 import ContentFourth from "./ContentFourth/ContentFourth";
 import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
 
 const App: FC = () => {
     const [contentSecondState, setContentSecondState] = useState(0)
@@ -92,7 +93,7 @@ const App: FC = () => {
                             )
                         }}
                 </Scene>
-                <div style={{height: '800px'}}/>
+                <div style={{height: '1200px'}}/>
                 <Scene
                     triggerHook="1"
                     duration={'100%'}
@@ -119,6 +120,7 @@ const App: FC = () => {
                     </Timeline>
                 </Scene>
                 <Contact/>
+                <Footer/>
             </Controller>
         </div>
     );

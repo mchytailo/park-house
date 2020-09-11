@@ -24,7 +24,7 @@ const ContentThird: FC = ({currentProgress, nextProgress}) => {
                     paused
                     totalProgress={currentProgress}
                 >
-                    <ContentThirdImageLeftBlock>
+                    <ContentThirdImageLeftBlock currentProgress={currentProgress}>
                         <ContentThirdImageLeft src={contentThird1}/>
                     </ContentThirdImageLeftBlock>
 
