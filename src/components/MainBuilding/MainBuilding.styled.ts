@@ -12,10 +12,15 @@ export const MainBuildingSection = styled.div`
 
 export const MainBuildingImg = styled.img`
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -15%;
+    left: 0;
     min-height: 200%;
-    width: 100%;
+    min-width: 100%;
     pointer-events: none;
     transition: .1s;
+    
+    @media (min-width: 1200px) { 
+        bottom: 0;
+    }
+    
     `

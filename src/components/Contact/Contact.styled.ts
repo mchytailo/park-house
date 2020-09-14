@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const ContactSection = styled.div`  
-    padding: 80px 100px;
+    padding: 40px 40px;
     background: #9EA69C;
-
+    @media (min-width: 1200px) { 
+        padding: 80px 100px;
+    
+    }
 
     .ao-form {
     
@@ -46,17 +49,24 @@ export const ContactSection = styled.div`
         
         .ao-form-label, .ao-combo-label {
             text-align: left;
-            font: normal normal bold 18px/24px OptimaNormal;
-            letter-spacing: 4.32px;
+            font: normal normal bold 16px/22px OptimaNormal !important;
+            letter-spacing: 2px;
             color: #fff;
             text-transform: uppercase;
+            white-space: nowrap;
+            
+            
+            @media (min-width: 1300px) { 
+                letter-spacing: 4px;
+                font: normal normal bold 18px/24px OptimaNormal !important;
+            }
         }
         .ao-form-label {
             margin-bottom: 8px;
         }
         
         .ao-column-inner{
-            padding: 0 60px 0 0 !important;
+            padding: 0 10% 0 0 !important;
         }
         
         .ao-form-field {

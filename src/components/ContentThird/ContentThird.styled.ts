@@ -74,6 +74,5 @@ text-transform: uppercase;
 export const ContentThirdTextBlock = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 80px 0 0 80px;
-    overflow: hidden;
+    padding: 10% 0 0 80px;
     `

@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: ${props => props.changeBackground === 1 ? 'white' : 'grey'};
+    overflow-x: hidden;
   }
  *{
  
@@ -27,5 +28,23 @@ export const GlobalStyle = createGlobalStyle`
       padding-bottom: 0 !important;
       z-index: 1;
   }
+  
+    @media (min-width: 576px) { 
+   
+    }
+
+    @media (min-width: 768px) { 
+     
+    }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { 
+    
+    }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { 
+    
+    }
 `;
 

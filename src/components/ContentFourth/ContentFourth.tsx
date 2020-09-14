@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import contentFourth from "../../assets/images/ContentFourth.png";
+import contentFourth from "../../assets/images/ContentFourth2x.png";
 import {Tween} from "react-gsap";
 import {ContentFourthBlock, ContentFourthImage, ContentFourthText} from "./ContentFourth.styled";
 

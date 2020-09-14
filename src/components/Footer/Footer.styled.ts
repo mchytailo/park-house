@@ -3,7 +3,13 @@ import styled from "styled-components";
 export const FooterSection = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 56px 100px 28px;
+    padding: 40px;
+    
+    @media (min-width: 1200px) { 
+        padding: 56px 100px 28px;
+    
+    }
+    
     `
 
 export const FooterLogoBlock = styled.div`
