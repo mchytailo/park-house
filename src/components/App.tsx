@@ -34,7 +34,6 @@ const App: FC = () => {
                     >
                         {progress => {
                             setContentMainState(progress)
-                            console.log('progress11111', progress);
                             return (
                                 <div>
                                     <Main progress={progress}/>
@@ -60,7 +59,6 @@ const App: FC = () => {
                     >
                         {progress => {
                             setHeaderViewProgress(progress);
-                            console.log('progress22222', progress);
                             return (
                                 <div style={{height: '100vh'}}>
                                     {contentSecondState < 1 &&
@@ -80,7 +78,6 @@ const App: FC = () => {
                         pin
                     >
                         {progress => {
-                            console.log('progress33333', progress);
                             return (
                                 <div>
                                     <ContentFirst

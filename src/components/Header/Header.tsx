@@ -3,8 +3,6 @@ import {HeaderBlock, HeaderLink, HeaderLinkFixed, HeaderLogo, HeaderWrapper} fro
 import headerLogo from "../../assets/images/logo-PH_lockup.svg";
 
 const scrollToRef = (ref) => {
-    console.log(ref);
-
     ref && ref.current && ref.current.scrollIntoView({block:    "start" ,behavior: 'smooth'})
 }
 const Header: FC = ({headerViewProgress, contactRef}) => {
