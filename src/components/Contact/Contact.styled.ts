@@ -49,8 +49,8 @@ export const ContactSection = styled.div`
         
         .ao-form-label, .ao-combo-label {
             text-align: left;
-            font: normal normal bold 16px/22px OptimaNormal !important;
-            letter-spacing: 2px;
+            font: normal normal bold 16px/20px OptimaNormal !important;
+            letter-spacing: 1.3px !important
             color: #fff;
             text-transform: uppercase;
             white-space: nowrap;
