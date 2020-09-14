@@ -16,43 +16,23 @@ export const ContentSecondImageBlock = styled.div`
     align-items: center;
     overflow: hidden;
     position: relative;
-    opacity:${
-    props =>{
-        if(props.currentProgress === 1){
-            return String(1 - props.nextProgress) + ' !important'
-        }
+    transition: .1s;
+    `
 
-    }
-};
-    transform: translateY(${
-    props =>{
-        if(props.currentProgress === 1){
-            return String(props.nextProgress * (-100)) + 'vh';
-        }
 
-    }
-});
-
-&:after {
-        content: '';
-        display: block;
-        background: white;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: ${
-    props =>{
-        if(props.currentProgress > 0){
-            return String((props.currentProgress) * 100) + '%'
-        }
-
-    }
-}; 
-    }
+export const ContentSecondImageBlockWall = styled.div`
+    content: '';
+    display: block;
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
     `
 export const ContentSecondImage = styled.img`
-    height: 100%
+    width: 100%;
+    min-height: 100%;
     `
 export const ContentSecondText = styled.p`
     text-align: center;
@@ -70,20 +50,5 @@ export const ContentSecondTextBlock = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    opacity:${
-    props =>{
-        if(props.currentProgress === 1){
-            return String(1 - props.nextProgress) + ' !important'
-        }
-
-    }
-};
-    transform: translateY(${
-    props =>{
-        if(props.currentProgress === 1){
-            return String(props.nextProgress * (-80)) + 'vh';
-        }
-
-    }
-});
+    transition: .1s;
     `

@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {
     ContentThirdBlock,
-    ContentThirdHeader,
+    ContentThirdHeader, ContentThirdImageBlockWall,
     ContentThirdImageLeft,
     ContentThirdImageLeftBlock,
     ContentThirdImageRight,
@@ -13,8 +13,7 @@ import {Tween} from "react-gsap";
 import contentThird1 from "../../assets/images/contentThird1.png";
 import contentThird2 from "../../assets/images/contentThird2.png";
 
-const ContentThird: FC = ({currentProgress, nextProgress}) => {
-    // console.log('progress', progress);
+const ContentThird: FC = ({currentProgress}) => {
     return (
         <ContentThirdBlock>
             <ContentThirdSectionLeft>
@@ -24,7 +23,14 @@ const ContentThird: FC = ({currentProgress, nextProgress}) => {
                     paused
                     totalProgress={currentProgress}
                 >
-                    <ContentThirdImageLeftBlock currentProgress={currentProgress}>
+                    <ContentThirdImageLeftBlock>
+                        <ContentThirdImageBlockWall
+                            style={{
+                                left: currentProgress !== 1
+                                    ? String((currentProgress) * 100) + '%'
+                                    : ''
+                            }}
+                        />
                         <ContentThirdImageLeft src={contentThird1}/>
                     </ContentThirdImageLeftBlock>
 

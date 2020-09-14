@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {Tween} from "react-gsap";
 import {
     ContentFirstBlock,
     ContentFirstImage,
@@ -7,16 +8,15 @@ import {
     ContentFirstTextBlock
 } from "./ContentFirst.styled";
 import contentFirst from "../../assets/images/ContentFirst.png";
-import {Tween} from "react-gsap";
 
 const ContentFirst: FC = ({currentProgress, nextProgress}) => {
-    console.log(currentProgress);
     return (
         <ContentFirstBlock
             style={{
                 visibility: nextProgress < 1
                     ? 'visible'
-                    : 'hidden'
+                    : 'hidden',
+                pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none'
             }}>
             <Tween
                 from={{opacity: 0}}

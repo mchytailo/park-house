@@ -10,7 +10,7 @@ const Footer: FC = () => {
                 <FooterLogo src={footerLogoUrl}/>
             </FooterLogoBlock>
             <FooterText>
-                © 22020 Polaris Pacific (Hawaii), Real Estate Broker. Lorem ipsum dolor sit amet, consetetur sadipscing
+                © 2020 Polaris Pacific (Hawaii), Real Estate Broker. Lorem ipsum dolor sit amet, consetetur sadipscing
                 elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
                 voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                 takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -24,10 +24,6 @@ const Footer: FC = () => {
                 voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                 takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
             </FooterText>
-            <FooterLink>
-                LEGAL
-            </FooterLink>
-
         </FooterSection>
     )
 

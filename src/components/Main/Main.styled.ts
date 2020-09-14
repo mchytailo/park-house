@@ -5,4 +5,7 @@ export const MainSection = styled.div`
     display: flex;
     flex-direction: column;
     padding: 128px 140px 0;
+    > div {
+        transition: .1s;
+    }
     `

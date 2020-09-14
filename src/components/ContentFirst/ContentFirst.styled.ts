@@ -39,17 +39,15 @@ export const ContentFirstImageBlock = styled.div`
     overflow: hidden;
     `
 
-
-
 export const ContentFirstImageBlockWall = styled.div`
-        content: '';
-        display: block;
-        background: white;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-
+    content: '';
+    display: block;
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
     `
 
 export const ContentFirstImage = styled.img`

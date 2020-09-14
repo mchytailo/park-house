@@ -6,33 +6,32 @@ export const ContentThirdBlock = styled.div`
     width: 100%;
     height: 100vh;
     padding: 0;
+    > div {
+        transition: .1s;
+    }
     `
 export const ContentThirdImageLeftBlock = styled.div`
-width: 100%;
-height: 450px;
-overflow: hidden;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
     align-items: center;
     display: flex;
     position: relative;
-    
-&:after {
-        content: '';
-        display: block;
-        background: white;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: ${
-    props =>{
-        if(props.currentProgress > 0){
-            return String((props.currentProgress) * 100) + '%'
-        }
-
-    }
-}; 
-    }
     `
+
+
+export const ContentThirdImageBlockWall = styled.div`
+    content: '';
+    display: block;
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    transition: .1s;
+    `
+
 export const ContentThirdSection = styled.div`
     width: 50%;
     overflow: hidden;
@@ -43,6 +42,9 @@ export const ContentThirdSectionLeft = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    > div {
+        transition: .1s;
+    }
     `
 
 export const ContentThirdImageRight = styled.img`

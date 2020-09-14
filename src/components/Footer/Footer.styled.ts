@@ -22,11 +22,3 @@ export const FooterText = styled.p`
     color: #797972;
     margin: 0 0 24px 0;
     `
-
-export const FooterLink = styled.a`
-    text-align: left;
-    text-decoration: underline;
-    font: normal normal normal 16px/16px OptimaNormal;
-    letter-spacing: 0px;
-    color: #797972;
-    `

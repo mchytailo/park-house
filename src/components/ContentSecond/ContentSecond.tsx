@@ -2,19 +2,20 @@ import React, {FC} from 'react';
 import {
     ContentSecondBlock,
     ContentSecondImage,
-    ContentSecondImageBlock,
-    ContentSecondSection,
+    ContentSecondImageBlock, ContentSecondImageBlockWall,
     ContentSecondText,
     ContentSecondTextBlock
 } from "./ContentSecond.styled";
 import {Tween} from "react-gsap";
 import contentSecond from "../../assets/images/ContentSecond.png";
-import {ContentFirstTextBlock} from "../ContentFirst/ContentFirst.styled";
 
 const ContentSecond: FC = ({currentProgress, nextProgress}) => {
-    // console.log('progress', progress);
     return (
-        <ContentSecondBlock currentProgress={currentProgress} nextProgress={nextProgress}>
+        <ContentSecondBlock
+            style={{
+                pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none'
+            }}
+        >
             <Tween
                 from={{opacity: 0}}
                 to={{opacity: 1}}
@@ -23,9 +24,22 @@ const ContentSecond: FC = ({currentProgress, nextProgress}) => {
             >
 
                 <ContentSecondImageBlock
-                    currentProgress={currentProgress}
-                    nextProgress={nextProgress}
+                    style={{
+                        opacity: currentProgress === 1
+                            ? String(1 - nextProgress)
+                            : '',
+                        transform: currentProgress === 1
+                            ? 'translateY(' + String(nextProgress * (-150)) + 'vh)'
+                            : ''
+                    }}
                 >
+                    <ContentSecondImageBlockWall
+                        style={{
+                            right: currentProgress !== 1
+                                ? String((currentProgress) * 100) + '%'
+                                : ''
+                        }}
+                    />
                     <ContentSecondImage src={contentSecond}/>
                 </ContentSecondImageBlock>
             </Tween>
@@ -36,8 +50,14 @@ const ContentSecond: FC = ({currentProgress, nextProgress}) => {
                 totalProgress={currentProgress}
             >
                 <ContentSecondTextBlock
-                    currentProgress={currentProgress}
-                    nextProgress={nextProgress}
+                    style={{
+                        opacity: currentProgress === 1
+                            ? String(1 - nextProgress)
+                            : '',
+                        transform: currentProgress === 1
+                            ? 'translateY(' + String(nextProgress * (-100)) + 'vh)'
+                            : ''
+                    }}
                 >
                     <ContentSecondText>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy

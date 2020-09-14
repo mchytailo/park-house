@@ -149,8 +149,15 @@ export const ContactText = styled.div`
     color: #FFFFFF;
     margin-bottom: 80px;
     `
+export const ContactHeader = styled.h2`  
+    font: normal normal normal 48px/48px OptimaNormal;
+    letter-spacing: 12.67px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    `
 export const ContactLine = styled.div`  
     height: 1px;
     background: #FFFFFF;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     `

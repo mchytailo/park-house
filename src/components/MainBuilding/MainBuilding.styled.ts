@@ -7,6 +7,7 @@ export const MainBuildingSection = styled.div`
     left: 0;
     top: 0;
     right: 0;
+    transition: .1s;
     `
 
 export const MainBuildingImg = styled.img`
@@ -16,5 +17,5 @@ export const MainBuildingImg = styled.img`
     min-height: 200%;
     width: 100%;
     pointer-events: none;
-    transition: .2s;
+    transition: .1s;
     `

@@ -1,12 +1,9 @@
 import React, {FC} from 'react';
 import contentFourth from "../../assets/images/ContentFourth.png";
-import {Timeline, Tween} from "react-gsap";
-import {Scene} from "react-scrollmagic";
+import {Tween} from "react-gsap";
 import {ContentFourthBlock, ContentFourthImage, ContentFourthText} from "./ContentFourth.styled";
 
-const ContentFourth: FC = ({currentProgress, nextProgress}) => {
-
-
+const ContentFourth: FC = () => {
     return (
         <ContentFourthBlock>
             <Tween
@@ -25,7 +22,6 @@ const ContentFourth: FC = ({currentProgress, nextProgress}) => {
             </ContentFourthText>
         </ContentFourthBlock>
     )
-
 }
 
 export default ContentFourth;
