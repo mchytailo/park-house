@@ -43,7 +43,7 @@ const App: FC = () => {
                     </Scene>
                     <Scene pin={{pushFollowers: false}}
                            triggerHook={'onLeave'}
-                           duration={'90%'}
+                           duration={'100%'}
                     >
                         <div>
                             <MainBuilding

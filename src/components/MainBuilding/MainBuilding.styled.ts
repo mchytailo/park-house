@@ -14,7 +14,7 @@ export const MainBuildingImg = styled.img`
     position: absolute;
     bottom: -15%;
     left: 0;
-    min-height: 200%;
+    min-height: 250%;
     min-width: 100%;
     pointer-events: none;
     transition: .1s;
