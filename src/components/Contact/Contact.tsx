@@ -8,7 +8,7 @@ const Contact: FC = ({contactRef}) => {
 
         script.innerHTML = contactEmbed;
         script.type = 'text/javascript';
-        script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0001';
+        script.id = 'aoform-script-0ea0194e-db01-4ec2-81d1-4f0f8550f840:d-0001';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
     },[])
 
