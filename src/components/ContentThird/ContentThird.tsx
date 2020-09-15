@@ -8,10 +8,10 @@ import {
     ContentThirdSection, ContentThirdSectionLeft,
     ContentThirdText,
     ContentThirdTextBlock
-} from "./ContentThird.styled";
-import {Tween} from "react-gsap";
-import contentThird1 from "../../assets/images/contentThird1.png";
-import contentThird2 from "../../assets/images/contentThird2.png";
+} from './ContentThird.styled';
+import {Tween} from 'react-gsap';
+import contentThird1 from '../../assets/images/ContentThird1.png';
+import contentThird2 from './../../assets/images/ContentThird2.png';
 
 const ContentThird: FC = ({currentProgress}) => {
     return (
@@ -67,8 +67,8 @@ const ContentThird: FC = ({currentProgress}) => {
             </Tween>
 
         </ContentThirdBlock>
-    )
+    );
 
-}
+};
 
 export default ContentThird;

@@ -28,7 +28,7 @@ const App: FC = () => {
 
                 <Controller>
                     <Scene
-                        duration={1000}
+                        duration={'100%'}
                         pin
                         triggerHook={'onLeave'}
                     >
