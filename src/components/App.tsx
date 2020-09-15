@@ -20,6 +20,8 @@ const App: FC = () => {
     const [headerViewProgress, setHeaderViewProgress] = useState(0)
     const contactRef = useRef(null)
 
+    const windowWidth = window.innerWidth;
+
     return (
         <>
             <Header headerViewProgress={headerViewProgress} contactRef={contactRef}/>
@@ -28,7 +30,7 @@ const App: FC = () => {
 
                 <Controller>
                     <Scene
-                        duration={'30%'}
+                        duration={windowWidth > 991.98 ? '100%' : '30%'}
                         pin
                         triggerHook={'onLeave'}
                     >
@@ -43,7 +45,7 @@ const App: FC = () => {
                     </Scene>
                     <Scene pin={{pushFollowers: false}}
                            triggerHook={'onLeave'}
-                           duration={'30%'}
+                           duration={windowWidth > 991.98 ? '100%' : '30%'}
                     >
                         <div>
                             <MainBuilding

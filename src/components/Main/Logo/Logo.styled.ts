@@ -6,9 +6,10 @@ export const LogoWrapper = styled.div`
     transition: 1s;
     max-width: 100%;
     width: 360px;
+    max-width: 720px;
     
     @media (min-width: 992px) {
-        width: auto;
+        width: 100%;
     }
     `
 export const LogoIcon = styled.img`
