@@ -11,8 +11,9 @@ export const HeaderWrapper = styled.div`
     z-index: 10;
     @media (min-width: 1200px) {  
         height: 100px;
-        
     }
+    
+    
     `
 export const HeaderBlock = styled.div`  
     display: flex;
@@ -62,5 +63,15 @@ export const HeaderLinkFixed = styled.span`
     
     @media (min-width: 1200px) { 
         top: 48px;
+    }
+    
+    @media (min-width: 1200px) { 
+        top: 48px;
+    }
+    
+    @media (max-width: 991.98px) {
+        top: 78px;
+        font: normal normal normal 16px/16px OptimaNormal;
+        letter-spacing: 4.8px;
     }
     `

@@ -7,6 +7,9 @@ export const IntroWrapper = styled.div`
     padding-left: 170px;
     max-width: 600px;
     transition: .3s;
+    @media (max-width: 991.98px) {    
+        padding-left: 13%;
+    }
     `
 export const IntroText = styled.p`
     margin: 0;
@@ -15,6 +18,11 @@ export const IntroText = styled.p`
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-bottom: 56px;
+    
+    @media (max-width: 991.98px) {
+        font: normal normal normal 22px/34px OptimaNormal;
+        margin-bottom: 40px;
+    }
     `
 
 export const IntroLabel = styled.p`
@@ -24,4 +32,8 @@ export const IntroLabel = styled.p`
     letter-spacing: 5.5px;
     color: #FFFFFF;
     text-transform: uppercase;
+    @media (max-width: 991.98px) {
+        font: normal normal normal 18px/32px OptimaNormal;
+        letter-spacing: 4.5px;
+    }
     `

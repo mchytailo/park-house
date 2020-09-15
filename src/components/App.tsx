@@ -28,7 +28,7 @@ const App: FC = () => {
 
                 <Controller>
                     <Scene
-                        duration={'100%'}
+                        duration={'30%'}
                         pin
                         triggerHook={'onLeave'}
                     >
@@ -43,7 +43,7 @@ const App: FC = () => {
                     </Scene>
                     <Scene pin={{pushFollowers: false}}
                            triggerHook={'onLeave'}
-                           duration={'100%'}
+                           duration={'30%'}
                     >
                         <div>
                             <MainBuilding
