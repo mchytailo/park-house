@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: white;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
  *{
  
