@@ -44,6 +44,7 @@ export const ContactSection = styled.div`
             padding-left: 30px;
             position: relative;
             cursor: pointer;
+            color: white;
         }
         
         input[type=checkbox]:checked+span:before,
@@ -59,11 +60,12 @@ export const ContactSection = styled.div`
             color: #fff;
             text-transform: uppercase;
             white-space: nowrap;
+                color: white;
             
             
             @media (min-width: 1300px) { 
                 letter-spacing: 4px;
-                font: normal normal bold 18px/24px OptimaNormal !important;
+                font: normal normal bold 18px/24px OptimaNormal ;
             }
         }
         .ao-form-label {
@@ -112,6 +114,19 @@ export const ContactSection = styled.div`
             
                 .ao-column.ao-column-4 {
                     width: 100%;
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        
+                        > .ao-block-wrapper:nth-child(1),
+                        > .ao-block-wrapper:nth-child(2){
+                            width: calc(50% - 12px);
+                        }
+                        > .ao-block-wrapper:nth-child(3){
+                            width: 100%;
+                        }
+                    }
                 }
                 .ao-column-inner {
                     padding: 0 !important;
