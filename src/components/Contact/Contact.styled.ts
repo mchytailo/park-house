@@ -1,17 +1,11 @@
 import styled from "styled-components";
 
 export const ContactSection = styled.div`  
-    padding: 40px 40px;
+    padding: 40px;
     background: #9EA69C;
     @media (min-width: 1200px) { 
         padding: 80px 100px;
     }
-
-
-@media (max-width: 991.98px) { 
-
-}
-
 
     .ao-form {
     
@@ -36,15 +30,16 @@ export const ContactSection = styled.div`
         input[type=checkbox]+span, 
         input[type=radio]+span {
             display: block;
-            font-family: OptimaNormal,sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.5;
-            font-weight: 400;
+            font: normal normal bold 16px/24px OptimaNormal;
+            letter-spacing: 4.32px;
             padding-left: 30px;
             position: relative;
             cursor: pointer;
             color: white;
+            @media (min-width: 1300px) { 
+                letter-spacing: 4px;
+                font: normal normal bold 18px/24px OptimaNormal ;
+            }
         }
         
         input[type=checkbox]:checked+span:before,
@@ -55,7 +50,7 @@ export const ContactSection = styled.div`
         
         .ao-form-label, .ao-combo-label {
             text-align: left;
-            font: normal normal bold 16px/20px OptimaNormal !important;
+            font: normal normal bold 16px/24px OptimaNormal;
             letter-spacing: 1.3px !important
             color: #fff;
             text-transform: uppercase;
@@ -72,8 +67,8 @@ export const ContactSection = styled.div`
             margin-bottom: 8px;
         }
         
-        .ao-column-inner{
-            padding: 0 10% 0 0 !important;
+        .ao-column-inner:nth-child(1){
+            padding: 0 10% 0 0;
         }
         
         .ao-form-field {
@@ -102,6 +97,7 @@ export const ContactSection = styled.div`
                     .ao-column-inner {
                         display: flex;
                         flex-direction: row;
+                        padding: 0;
                         > .ao-block-wrapper {    
                             width: calc(50% - 30px);
                         }
@@ -115,16 +111,20 @@ export const ContactSection = styled.div`
                 .ao-column.ao-column-4 {
                     width: 100%;
                     &:nth-child(2) {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
+                        margin-top: 16px;
                         
-                        .ao-column-inner > .ao-block-wrapper:nth-child(1),
-                        .ao-column-inner > .ao-block-wrapper:nth-child(2){
-                            width: calc(50% - 12px);
-                        }
-                        .ao-column-inner > .ao-block-wrapper:nth-child(3){
-                            width: 100%;
+                        .ao-column-inner{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                        
+                            > .ao-block-wrapper:nth-child(1),
+                            > .ao-block-wrapper:nth-child(2){
+                                width: calc(50% - 12px);
+                            }
+                            > .ao-block-wrapper:nth-child(3){
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -133,12 +133,11 @@ export const ContactSection = styled.div`
                 }
                 
                 .ao-column.ao-column-4:nth-child(3) {
-                    width: 100%;
-                    
                     .ao-column-inner {
-                        flex-direction: row !important;
+                        flex-direction: column;
                         > .ao-block-wrapper {    
-                            width: calc(50% - 30px);
+                            width: 100%;
+                            margin-top: 20px;
                         }
                     }
                     
@@ -185,28 +184,34 @@ export const ContactSection = styled.div`
         
         
         .ao-submit-block{
-            margin-top: 60px !important;
+            margin-top: 60px;
                
             @media (max-width: 1199.98px) {
                margin-top: 30px;
+            }
+            @media (max-width: 991.98px) {
+               margin-top: 0;
             }
             > div {
                 text-align: left !important;
             }
             
             button.ao-form-submit {
-                font: normal normal normal 28px/28px OptimaNormal !important;
+                font: normal normal normal 28px/28px OptimaNormal;
                 letter-spacing: 7.39px;
                 text-transform: uppercase;
                 transition: .2s;
                 outline: none;  
-                padding: 20px 100px !important;
-                background: rgb(158, 166, 156) !important;
-                border: 3px solid white !important;
+                padding: 20px 100px ;
+                background: rgb(158, 166, 156) ;
+                border: 3px solid white ;
                 color: white;
                 &:hover{
-                    background: white !important;
-                    color: rgb(158, 166, 156) !important
+                    background: white ;
+                    color: rgb(158, 166, 156) 
+                }
+                @media (max-width: 991.98px) {
+                   width: 100%;
                 }
             }
         
@@ -226,6 +231,11 @@ export const ContactText = styled.div`
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-bottom: 80px;
+    @media (max-width: 991.98px) {
+       font: normal normal normal 16px/22px OptimaNormal;
+       margin-bottom: 40px;
+    }
+    
     `
 export const ContactHeader = styled.h2`  
     font: normal normal normal 48px/48px OptimaNormal;
@@ -233,9 +243,18 @@ export const ContactHeader = styled.h2`
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 70px;
+    
+    @media (max-width: 991.98px) {
+       font: normal normal normal 28px/28px OptimaNormal;
+       letter-spacing: 7.39px
+       margin-bottom: 24px;
+    }
     `
 export const ContactLine = styled.div`  
     height: 1px;
     background: #FFFFFF;
     margin-bottom: 70px;
+    @media (max-width: 991.98px) {
+       margin-bottom: 40px;
+    }
     `
