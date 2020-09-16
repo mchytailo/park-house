@@ -16,9 +16,9 @@ import contentThird2 from './../../assets/images/ContentThird2.png';
 const ContentThird: FC = ({currentProgress, windowWidth}) => {
     return (
         <ContentThirdBlock>
+            {
+                windowWidth < 992 &&
             <ContentThirdBlockMobile>
-                {
-                    windowWidth < 992 &&
                     <Tween
                         from={{opacity: 0}}
                         to={{opacity: 1}}
@@ -36,8 +36,8 @@ const ContentThird: FC = ({currentProgress, windowWidth}) => {
                             <ContentThirdImageLeft src={contentThird1}/>
                         </ContentThirdImageLeftBlock>
                     </Tween>
-                }
             </ContentThirdBlockMobile>
+            }
             <ContentThirdSectionLeft>
                 {
                     windowWidth > 991 &&
