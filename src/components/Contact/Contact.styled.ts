@@ -78,6 +78,15 @@ export const ContactSection = styled.div`
             }
         }
         
+        .ao-input-block{
+            max-width: 440px;
+            
+            
+            .ao-form-error-message {
+                color: red;
+            }
+        }
+        
         .ao-form-field {
             background: #889287 ;
             border: none;
@@ -86,7 +95,6 @@ export const ContactSection = styled.div`
             font: normal normal normal 20px / 26px OptimaNormal !important;
             letter-spacing: 2px;
             color: white;
-            max-width: 440px;
             
             &:focus {
                 background: #434B42;
@@ -100,9 +108,26 @@ export const ContactSection = styled.div`
         select.ao-form-field {
             cursor: pointer;
             position: relative;
+            
             &:after, &:before {
-                content: '';
-             
+                content:'';
+                width:0;
+                height:0;
+                border-style:solid;
+                border-color:transparent;
+                border-left-width: 30px;
+                border-right-width: 30px;
+                border-top-width:25px;
+                position:absolute;
+                right:10px;
+            }
+            &:before {
+              border-top-color: darken($background, 25%);
+              top:30px;
+            }
+            &:after {
+              border-top-color: $background;
+              top:29px;
             }
         }
         
