@@ -119,11 +119,11 @@ export const ContactSection = styled.div`
                         flex-wrap: wrap;
                         justify-content: space-between;
                         
-                        > .ao-block-wrapper:nth-child(1),
-                        > .ao-block-wrapper:nth-child(2){
+                        .ao-column-inner > .ao-block-wrapper:nth-child(1),
+                        .ao-column-inner > .ao-block-wrapper:nth-child(2){
                             width: calc(50% - 12px);
                         }
-                        > .ao-block-wrapper:nth-child(3){
+                        .ao-column-inner > .ao-block-wrapper:nth-child(3){
                             width: 100%;
                         }
                     }
