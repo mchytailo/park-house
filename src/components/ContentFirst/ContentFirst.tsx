@@ -9,14 +9,17 @@ import {
 } from "./ContentFirst.styled";
 import contentFirst from "../../assets/images/ContentFirst.png";
 
-const ContentFirst: FC = ({currentProgress, nextProgress}) => {
+const ContentFirst: FC = ({currentProgress, nextProgress, windowWidth}) => {
     return (
         <ContentFirstBlock
             style={{
                 visibility: nextProgress < 1
                     ? 'visible'
                     : 'hidden',
-                pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none'
+                pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none',
+                transform: nextProgress < 1 && windowWidth < 992
+                    ? ('translateX(-' + (nextProgress * 150) + 'px)')
+                    : ''
             }}>
             <Tween
                 from={{opacity: 0}}
@@ -27,7 +30,7 @@ const ContentFirst: FC = ({currentProgress, nextProgress}) => {
                 <ContentFirstTextBlock
                     style={{
                         opacity: currentProgress === 1
-                            ? String(1 - nextProgress) + ' !important'
+                            ? String(1 - nextProgress)
                             : ''
                     }}
                 >
@@ -50,7 +53,7 @@ const ContentFirst: FC = ({currentProgress, nextProgress}) => {
                                 ? String((1 - nextProgress) * 100) + '%'
                                 : '',
                             opacity: currentProgress === 1 && nextProgress !== 1
-                                ? String( nextProgress)
+                                ? String(nextProgress)
                                 : ''
                         }}
                     />

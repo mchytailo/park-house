@@ -5,8 +5,13 @@ export const ContactSection = styled.div`
     background: #9EA69C;
     @media (min-width: 1200px) { 
         padding: 80px 100px;
-    
     }
+
+
+@media (max-width: 991.98px) { 
+
+}
+
 
     .ao-form {
     
@@ -80,6 +85,52 @@ export const ContactSection = styled.div`
         }
         
         .ao-row:nth-child(1) {
+        
+            @media (max-width: 1199.98px) {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .ao-column.ao-column-4 {
+                    width: 50%;
+                }
+                
+                .ao-column.ao-column-4:nth-child(3) {
+                    width: 100%;
+                    
+                    .ao-column-inner {
+                        display: flex;
+                        flex-direction: row;
+                        > .ao-block-wrapper {    
+                            width: calc(50% - 30px);
+                        }
+                    }
+                    
+                }  
+            }
+        
+            @media (max-width: 991.98px) {
+            
+                .ao-column.ao-column-4 {
+                    width: 100%;
+                }
+                .ao-column-inner {
+                    padding: 0 !important;
+                }
+                
+                .ao-column.ao-column-4:nth-child(3) {
+                    width: 100%;
+                    
+                    .ao-column-inner {
+                        display: flex;
+                        flex-direction: row;
+                        > .ao-block-wrapper {    
+                            width: calc(50% - 30px);
+                        }
+                    }
+                    
+                }  
+            }
+        
             .ao-column:nth-child(3) .ao-column-inner {
                 display: flex;
                 flex-direction: column;
@@ -120,8 +171,11 @@ export const ContactSection = styled.div`
         
         
         .ao-submit-block{
-            margin-top: 60px;
-           
+            margin-top: 60px !important;
+               
+            @media (max-width: 1199.98px) {
+               margin-top: 30px;
+            }
             > div {
                 text-align: left !important;
             }

@@ -7,7 +7,10 @@ export const FooterSection = styled.div`
     
     @media (min-width: 1200px) { 
         padding: 56px 100px 28px;
+    }
     
+    @media (max-width: 991.98px) {
+        padding: 40px 40px 0;
     }
     
     `

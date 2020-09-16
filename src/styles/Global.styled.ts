@@ -23,11 +23,11 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
     }
   
-  .scrollmagic-container .scrollmagic-pin-spacer:nth-child(1){
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
-      z-index: 1;
-  }
+  // .scrollmagic-container .scrollmagic-pin-spacer:nth-child(1){
+  //     padding-top: 0 !important;
+  //     padding-bottom: 0 !important;
+  //     z-index: 1;
+  // }
   
     @media (min-width: 576px) { 
    

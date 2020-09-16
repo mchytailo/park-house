@@ -8,6 +8,13 @@ export const ContentSecondBlock = styled.div`
     top: 0;
     left: 0;
     right: 0;
+    
+    @media (max-width: 991.98px) {
+        flex-direction: column;
+        justify-content: center;    
+        height: calc(100vh - 100px);
+        padding: 100px 0 0;
+    }
     `
 
 export const ContentSecondImageBlock = styled.div`
@@ -17,6 +24,12 @@ export const ContentSecondImageBlock = styled.div`
     overflow: hidden;
     position: relative;
     transition: .1s;
+    
+    @media (max-width: 991.98px) {
+        width: 100%;
+        max-width: 540px;
+        height: auto;
+    }
     `
 
 
@@ -32,7 +45,12 @@ export const ContentSecondImageBlockWall = styled.div`
     `
 export const ContentSecondImage = styled.img`
     width: 100%;
-    min-height: 100%;
+    object-fit: cover;
+    @media (max-width: 991.98px) {
+    min-height: auto;
+    height: 120%;
+    object-position: 0 0;
+    }
     `
 export const ContentSecondText = styled.p`
     text-align: center;
@@ -42,6 +60,12 @@ export const ContentSecondText = styled.p`
     text-transform: uppercase;
     max-width: 800px;
     margin: 0;
+    
+    @media (max-width: 991.98px) {
+        font: normal normal normal 24px/40px OptimaNormal;
+        letter-spacing: 7.2px;
+        margin: 50px;
+    }
     `
 export const ContentSecondTextBlock = styled.div`
     width: 67%;
@@ -51,4 +75,9 @@ export const ContentSecondTextBlock = styled.div`
     align-items: center;
     overflow: hidden;
     transition: .1s;
+    
+    @media (max-width: 991.98px) {
+        width: 100%;
+        height: auto;
+    }
     `

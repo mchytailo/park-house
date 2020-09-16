@@ -1,13 +1,18 @@
 import React, {FC} from 'react';
-import {MainSection, MainWrapper} from "./Main.styled";
+import {MainBackground, MainBuildingImg, MainSection, MainWrapper} from "./Main.styled";
 import Logo from "./Logo/Logo";
 import {Tween} from "react-gsap";
 import Intro from "./Intro/Intro";
+import contentImage from "../../assets/images/main-building.png";
+import contentImage2 from "../../assets/images/main-building2.png";
 
-const Main: FC = ({progress}) => {
+const Main: FC = ({progress, nextProgress}) => {
     return (
         <MainWrapper>
-            <MainSection>
+            <MainSection
+            style={{visibility: nextProgress < 1 ? 'visible' : 'hidden'}}
+
+            >
                 <Tween
                     from={{opacity: 1}}
                     to={{opacity: 0}}
@@ -38,6 +43,26 @@ const Main: FC = ({progress}) => {
 
 
             </MainSection>
+            <MainBackground style={{
+                position: progress === 1 && nextProgress < 1  ? 'fixed' : 'relative',
+            }}>
+                <MainBuildingImg
+                    src={contentImage}
+                    alt=""
+                    style={{
+                        opacity: String(1 - progress)
+                    }}
+                />
+                <MainBuildingImg
+                    src={contentImage2}
+                    alt=""
+                    style={{
+                        opacity: String(progress)
+                    }}
+                />
+
+            </MainBackground>
+
         </MainWrapper>)
 
 }

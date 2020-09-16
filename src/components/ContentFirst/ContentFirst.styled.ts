@@ -15,14 +15,32 @@ export const ContentFirstBlock = styled.div`
     top: 0;
     left: 0;
     right: 0;
+    
+    @media (max-width: 1199.98px) {
+        align-items: center;
+    }
+    @media (max-width: 991.98px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: normal;
+         
+        height: calc(100vh - 100px);
+        padding: 100px 0 0;
+    }
+    
     `
 
 export const ContentFirstTextBlock = styled.div`
     width: 33%;
-    overflow: hidden;
     height: 100%;
     display: flex;
     align-items: flex-end;
+    
+    @media (max-width: 991.98px) {
+        width: 100%;
+        max-width: 440px;
+        height: auto;
+    }
     `
 export const ContentFirstText = styled.p`
     text-align: left;
@@ -32,11 +50,32 @@ export const ContentFirstText = styled.p`
     text-transform: uppercase;
     max-width: 440px;
     padding-left: 80px;
+    width: 100%;
+    
+    
+    @media (max-width: 1199.98px) {
+        padding-left: 40px;
+        width: calc(100% - 40px);
+    }
+    @media (max-width: 991.98px) {
+        font: normal normal normal 24px/40px OptimaNormal;
+        letter-spacing: 7.2px;
+        margin: 0 0 6vh 0;
+    }
+    
+    
     `
 export const ContentFirstImageBlock = styled.div`
     width: 67%;
     position: relative;
     overflow: hidden;
+    
+    @media (max-width: 991.98px) {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        position: initial;
+    }
+    
     `
 
 export const ContentFirstImageBlockWall = styled.div`
@@ -48,8 +87,14 @@ export const ContentFirstImageBlockWall = styled.div`
     bottom: 0;
     right: 0;
     z-index: 1;
+    
+    // @media (max-width: 991.98px) {
+    //     position: fixed;
+    // }
     `
 
 export const ContentFirstImage = styled.img`
+
+width: 100%;
 
     `

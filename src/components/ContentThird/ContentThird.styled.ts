@@ -9,6 +9,10 @@ export const ContentThirdBlock = styled.div`
     > div {
         transition: .1s;
     }
+    @media (max-width: 991.98px) {
+        flex-wrap: wrap;
+        height: auto;
+    }
     `
 export const ContentThirdImageLeftBlock = styled.div`
     width: 100%;
@@ -17,6 +21,11 @@ export const ContentThirdImageLeftBlock = styled.div`
     align-items: center;
     display: flex;
     position: relative;
+    @media (max-width: 991.98px) {
+        width: 100%;
+        max-width: 480px;
+        height: 260px;
+    }
     `
 
 
@@ -45,6 +54,11 @@ export const ContentThirdSectionLeft = styled.div`
     > div {
         transition: .1s;
     }
+    
+    @media (max-width: 991.98px) {
+        width: 45%;    
+        justify-content: flex-start;
+    }
     `
 
 export const ContentThirdImageRight = styled.img`
@@ -56,23 +70,38 @@ width: 100%;
     `
 export const ContentThirdText = styled.p`
     text-align: left;
-font: normal normal normal 25px/30px OptimaNormal;
-letter-spacing: 0px;
-color: #797972;
+    font: normal normal normal 25px/30px OptimaNormal;
+    letter-spacing: 0px;
+    color: #797972;
     max-width: 800px;
     margin: 0;
+    @media (max-width: 991.98px) {
+        font: normal normal normal 16px/22px OptimaNormal;
+    }
     `
 export const ContentThirdHeader = styled.h3`
     text-align: left;
-font: normal normal normal 25px/31px OptimaNormal;
-letter-spacing: 7.5px;
-color: #000000;
-text-transform: uppercase;
+    font: normal normal normal 25px/31px OptimaNormal;
+    letter-spacing: 7.5px;
+    color: #000000;
+    text-transform: uppercase;
     max-width: 800px;
     margin: 0 0 16px;
+    @media (max-width: 991.98px) {
+        font: normal normal normal 20px/20px OptimaNormal;
+        letter-spacing: 4.8px;
+    }
     `
 export const ContentThirdTextBlock = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10% 0 0 80px;
+    @media (max-width: 991.98px) {
+        padding: 0 0 0 20px;
+    }
+    `
+
+export const ContentThirdBlockMobile = styled.div`
+    width: 100%;
+    margin-bottom: 50px;
     `

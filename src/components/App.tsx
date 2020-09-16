@@ -2,7 +2,6 @@ import React, {FC, useRef, useState} from 'react';
 import {Controller, Scene} from 'react-scrollmagic';
 import {GlobalStyle} from '../styles/Global.styled';
 import Main from "./Main/Main";
-import MainBuilding from "./MainBuilding/MainBuilding";
 import {ContentBackgroundSection} from "./ContentFirst/ContentFirst.styled";
 import {Timeline} from "react-gsap";
 import ContentFirst from "./ContentFirst/ContentFirst";
@@ -16,7 +15,6 @@ import Header from "./Header/Header";
 const App: FC = () => {
     const [contentSecondState, setContentSecondState] = useState(0)
     const [contentThirdState, setContentThirdState] = useState(0)
-    const [contentMainState, setContentMainState] = useState(0)
     const [headerViewProgress, setHeaderViewProgress] = useState(0)
     const contactRef = useRef(null)
 
@@ -31,28 +29,17 @@ const App: FC = () => {
                 <Controller>
                     <Scene
                         duration={windowWidth > 991.98 ? '100%' : '30%'}
-                        pin
                         triggerHook={'onLeave'}
                     >
                         {progress => {
-                            setContentMainState(progress)
                             return (
                                 <div>
-                                    <Main progress={progress}/>
+                                    <Main progress={progress}
+                                          nextProgress={headerViewProgress}
+                                    />
                                 </div>
                             );
                         }}
-                    </Scene>
-                    <Scene pin={{pushFollowers: false}}
-                           triggerHook={'onLeave'}
-                           duration={windowWidth > 991.98 ? '100%' : '30%'}
-                    >
-                        <div>
-                            <MainBuilding
-                                progress={contentMainState}
-                                nextProgress={contentSecondState}
-                            />
-                        </div>
                     </Scene>
 
                     <Scene
@@ -85,6 +72,7 @@ const App: FC = () => {
                                     <ContentFirst
                                         currentProgress={progress}
                                         nextProgress={contentSecondState}
+                                        windowWidth={windowWidth}
                                     />
                                 </div>
                             )
@@ -104,6 +92,7 @@ const App: FC = () => {
                                         <ContentSecond
                                             currentProgress={progress}
                                             nextProgress={contentThirdState}
+                                            windowWidth={windowWidth}
                                         />
                                     </div>
                                 )
@@ -112,7 +101,7 @@ const App: FC = () => {
                     <div style={{height: '1200px'}}/>
                     <Scene
                         triggerHook="1"
-                        duration={'100%'}
+                        duration={windowWidth > 991 ? '100%' : '70%'}
                     >
                         {progress => {
                             setContentThirdState(progress);
@@ -121,6 +110,7 @@ const App: FC = () => {
                                     <ContentThird
                                         currentProgress={progress}
                                         nextProgress={contentThirdState}
+                                        windowWidth={windowWidth}
                                     />
                                 </div>
                             )
@@ -135,7 +125,7 @@ const App: FC = () => {
                             <ContentFourth/>
                         </Timeline>
                     </Scene>
-                    <Contact  contactRef={contactRef}/>
+                    <Contact contactRef={contactRef}/>
                     <Footer/>
                 </Controller>
             </div>

@@ -9,11 +9,14 @@ import {
 import {Tween} from "react-gsap";
 import contentSecond from "../../assets/images/ContentSecond.png";
 
-const ContentSecond: FC = ({currentProgress, nextProgress}) => {
+const ContentSecond: FC = ({currentProgress, nextProgress, windowWidth}) => {
     return (
         <ContentSecondBlock
             style={{
-                pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none'
+                pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none',
+                transform: windowWidth < 992
+                    ? ('translateX(' + ((1 - currentProgress) * 100) + 'px)')
+                    : ''
             }}
         >
             <Tween
@@ -29,7 +32,7 @@ const ContentSecond: FC = ({currentProgress, nextProgress}) => {
                             ? String(1 - nextProgress)
                             : '',
                         transform: currentProgress === 1
-                            ? 'translateY(' + String(nextProgress * (-150)) + 'vh)'
+                            ? 'translateY(' + String(nextProgress * (windowWidth >= 992 ? -150 : -100)) + 'vh)'
                             : ''
                     }}
                 >
@@ -44,8 +47,8 @@ const ContentSecond: FC = ({currentProgress, nextProgress}) => {
                 </ContentSecondImageBlock>
             </Tween>
             <Tween
-                from={{ opacity: 0}}
-                to={{ opacity: 1}}
+                from={{opacity: 0}}
+                to={{opacity: 1}}
                 paused
                 totalProgress={currentProgress}
             >

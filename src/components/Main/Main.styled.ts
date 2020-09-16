@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
-    height: 100vh;
+    height: 200vh;
+    position: relative;
+    
+@media (max-width: 1199.98px) {
+height: 180vh;
+}
+@media (max-width: 991.98px) { 
+    height: 130vh;
+}
     `
 export const MainSection = styled.div`
     display: flex;
@@ -10,6 +18,12 @@ export const MainSection = styled.div`
     max-height: 780px;
     height: calc(100% - 200px);
     padding: 100px 140px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
     > div {
         transition: .1s;
     }
@@ -24,4 +38,22 @@ export const MainSection = styled.div`
         height: auto;
         max-height: 500px;
     }
+    `
+export const MainBackground = styled.div`
+    bottom: 0;    
+    width: 100%;
+    height: 100%;
+    `
+
+export const MainBuildingImg = styled.img`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    transition: .1s;
+    width: 100%;
+    min-height: 100%;
+    min-width: 104vh;
+    object-fit: cover;
+    object-position: 0;
     `

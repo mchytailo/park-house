@@ -12,7 +12,9 @@ export const HeaderWrapper = styled.div`
     @media (min-width: 1200px) {  
         height: 100px;
     }
-    
+    @media (max-width: 991.98px) { 
+        height: 80px;
+    }
     
     `
 export const HeaderBlock = styled.div`  
@@ -32,12 +34,21 @@ export const HeaderBlock = styled.div`
         padding: 0 40px;
         width: calc(100% - 80px);
     }
+    @media (max-width: 991.98px) { 
+        padding: 0 40px 20px 24px;
+        height: calc(100% - 20px);
+        width: calc(100% - 64px);
+        align-items: flex-end;
+    }
     `
 export const HeaderLogo = styled.img` 
     height: auto;
     width: 110px;
     @media (min-width: 1200px) { 
         width: 140px;
+    }
+    @media (max-width: 991.98px) {
+        width: 110px;
     }
     
     `
@@ -48,6 +59,11 @@ export const HeaderLink = styled.span`
     text-transform: uppercase;
     opacity: 1;
     cursor: pointer;
+    
+    @media (max-width: 991.98px) {
+        font: normal normal normal 16px/32px Optima;
+        letter-spacing: 4.8px;
+    }
     `
 export const HeaderLinkFixed = styled.span` 
     font: normal normal normal 18px/55px OptimaNormal;
