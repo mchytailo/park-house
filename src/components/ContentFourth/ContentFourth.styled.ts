@@ -9,9 +9,12 @@ export const ContentFourthBlock = styled.div`
     }
     `
 export const ContentFourthImage = styled.img`
-      width: 100%;
-      height: auto;
-      position: absolute;
+      min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    object-fit: cover;
+    bottom: 0;
+    width: 100%;
     `
 export const ContentFourthText = styled.h3`
     position: absolute;
@@ -31,6 +34,9 @@ export const ContentFourthText = styled.h3`
     color: #797972;
     text-transform: uppercase;
         
+    @media (max-width: 1200px) {
+        max-height: 300px;
+    }
     @media (max-width: 991.98px) {
         font: normal normal normal 24px/40px OptimaNormal;
         letter-spacing: 7.2px;
