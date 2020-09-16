@@ -72,6 +72,10 @@ export const ContactSection = styled.div`
         
         .ao-column-inner:nth-child(1){
             padding: 0 10% 0 0;
+            
+            @media (max-width: 991.98px) {
+                padding: 0;
+            }
         }
         
         .ao-form-field {

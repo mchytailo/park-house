@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {FooterLink, FooterLogo, FooterLogoBlock, FooterSection, FooterText} from "./Footer.styled";
+import {FooterLogo, FooterLogoBlock, FooterSection, FooterText} from "./Footer.styled";
 import footerLogoUrl from "../../assets/images/footer-logo.png";
 
 
