@@ -44,7 +44,7 @@ const Main: FC = ({progress, nextProgress}) => {
 
             </MainSection>
             <MainBackground style={{
-                position: progress === 1 && nextProgress < 1  ? 'fixed' : 'relative',
+                position: progress === 1 && nextProgress < 1  ? 'fixed' : 'relative'
             }}>
                 <MainBuildingImg
                     src={contentImage}
