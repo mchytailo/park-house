@@ -121,8 +121,7 @@ export const ContactSection = styled.div`
                     width: 100%;
                     
                     .ao-column-inner {
-                        display: flex;
-                        flex-direction: row;
+                        flex-direction: row !important;
                         > .ao-block-wrapper {    
                             width: calc(50% - 30px);
                         }
