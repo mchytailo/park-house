@@ -4,7 +4,7 @@ import OptimaFontNormalwoff from '../assets/fonts/optima-webfont/OPTIMA.woff';
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
-    font-family: 'Optima', sans-serif;
+    font-family: 'OptimaNormal', sans-serif;
     margin: 0;
     padding: 0;
     background: white;

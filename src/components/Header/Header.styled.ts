@@ -40,6 +40,10 @@ export const HeaderBlock = styled.div`
         width: calc(100% - 64px);
         align-items: flex-end;
     }
+    @media (max-width: 575.98px) { 
+        padding: 0 24px 20px ;
+        width: calc(100% - 40px);
+    }
     `
 export const HeaderLogo = styled.img` 
     height: auto;
@@ -61,7 +65,7 @@ export const HeaderLink = styled.span`
     cursor: pointer;
     
     @media (max-width: 991.98px) {
-        font: normal normal normal 16px/32px Optima;
+        font: normal normal normal 16px/32px OptimaNormal;
         letter-spacing: 4.8px;
     }
     `
@@ -90,4 +94,15 @@ export const HeaderLinkFixed = styled.span`
         font: normal normal normal 16px/16px OptimaNormal;
         letter-spacing: 4.8px;
     }
+    
+    
+    @media (max-width: 767.98px) { 
+        top: 48px;
+    }
+    
+    @media (max-width: 575.98px) { 
+        top: auto;
+        bottom: 40px;
+        right: 24px;
+     }
     `

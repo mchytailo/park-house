@@ -27,11 +27,11 @@ const Main: FC = ({progress, nextProgress}) => {
                 <Tween
                     from={{
                         opacity: 1,
-                        marginLeft: 0
+                        x: 0
                     }}
                     to={{
                         opacity: 0,
-                        marginLeft: '-40vw'
+                        x: '-40vw'
                     }}
                     paused
                     totalProgress={progress}

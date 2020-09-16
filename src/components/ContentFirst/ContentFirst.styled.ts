@@ -63,6 +63,10 @@ export const ContentFirstText = styled.p`
         margin: 0 0 6vh 0;
     }
     
+    @media (max-width: 575.98px) { 
+        font: normal normal normal 20px/40px OptimaNormal;
+        letter-spacing: 4.4px;
+    }
     
     `
 export const ContentFirstImageBlock = styled.div`

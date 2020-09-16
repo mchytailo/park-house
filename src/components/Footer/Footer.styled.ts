@@ -13,6 +13,10 @@ export const FooterSection = styled.div`
         padding: 40px 40px 0;
     }
     
+    @media (max-width: 575.98px) { 
+        padding: 40px 16px 0;
+    }
+    
     `
 
 export const FooterLogoBlock = styled.div`

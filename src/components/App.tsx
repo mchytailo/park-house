@@ -28,7 +28,7 @@ const App: FC = () => {
 
                 <Controller>
                     <Scene
-                        duration={windowWidth > 991.98 ? '100%' : '30%'}
+                        duration={windowWidth > 991.98 || windowWidth < 576 ? '100%' : '30%'}
                         triggerHook={'onLeave'}
                     >
                         {progress => {
@@ -116,7 +116,7 @@ const App: FC = () => {
                             )
                         }}
                     </Scene>
-                    <div style={{height: '200px'}}/>
+                    <div style={{height: windowWidth > 575 ? '200px' : '100px'}}/>
                     <Scene
                         duration="200%"
                         triggerHook="onEnter"

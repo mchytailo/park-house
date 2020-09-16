@@ -44,6 +44,11 @@ export const ContentThirdImageBlockWall = styled.div`
 export const ContentThirdSection = styled.div`
     width: 50%;
     overflow: hidden;
+    
+    @media (max-width: 575.98px) { 
+        width: calc(100% - 32px);
+        margin-left: auto;
+    }
     `
 export const ContentThirdSectionLeft = styled.div`
     width: 40%;
@@ -58,6 +63,11 @@ export const ContentThirdSectionLeft = styled.div`
     @media (max-width: 991.98px) {
         width: 45%;    
         justify-content: flex-start;
+    }
+    
+    @media (max-width: 575.98px) { 
+        width: 100%;   
+        margin-bottom: 64px;
     }
     `
 

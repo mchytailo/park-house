@@ -7,6 +7,9 @@ export const ContactSection = styled.div`
         padding: 80px 100px;
     }
 
+    @media (max-width: 575.98px) { 
+        padding: 40px 16px;
+    }
     .ao-form {
     
         input[type=checkbox], input[type=radio] {
@@ -121,6 +124,10 @@ export const ContactSection = styled.div`
                             > .ao-block-wrapper:nth-child(1),
                             > .ao-block-wrapper:nth-child(2){
                                 width: calc(50% - 12px);
+                                
+                                @media (max-width: 575.98px) { 
+                                    width: 100%;
+                                }
                             }
                             > .ao-block-wrapper:nth-child(3){
                                 width: 100%;
@@ -204,7 +211,7 @@ export const ContactSection = styled.div`
                 outline: none;  
                 padding: 20px 100px ;
                 background: rgb(158, 166, 156) ;
-                border: 3px solid white ;
+                border: 3px solid white !important;
                 color: white;
                 &:hover{
                     background: white ;

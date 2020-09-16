@@ -4,9 +4,12 @@ export const MainWrapper = styled.div`
     height: 200vh;
     position: relative;
 
-@media (max-width: 991.98px) { 
-    height: 130vh;
-}
+    @media (max-width: 991.98px) { 
+        height: 130vh;
+    }
+    @media (max-width: 575.98px) { 
+        height: 200vh;
+    }
     `
 export const MainSection = styled.div`
     display: flex;
@@ -40,9 +43,12 @@ export const MainBackground = styled.div`
     bottom: 0;    
     width: 100%;
     height: 200vh;
-@media (max-width: 991.98px) { 
-    height: 130vh;
-}
+    @media (max-width: 991.98px) { 
+        height: 130vh;
+    }
+    @media (max-width: 575.98px) { 
+        height: 200vh;
+    }
     `
 
 export const MainBuildingImg = styled.img`

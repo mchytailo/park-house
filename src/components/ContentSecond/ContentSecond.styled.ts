@@ -26,9 +26,10 @@ export const ContentSecondImageBlock = styled.div`
     transition: .1s;
     
     @media (max-width: 991.98px) {
-        width: 100%;
+        width: calc(100% - 32px);
         max-width: 540px;
         height: auto;
+        margin-right: 32px;
     }
     `
 
@@ -47,9 +48,9 @@ export const ContentSecondImage = styled.img`
     width: 100%;
     object-fit: cover;
     @media (max-width: 991.98px) {
-    min-height: auto;
-    height: 120%;
-    object-position: 0 0;
+        min-height: auto;
+        height: 120%;
+        object-position: 0 0;
     }
     `
 export const ContentSecondText = styled.p`
@@ -65,6 +66,12 @@ export const ContentSecondText = styled.p`
         font: normal normal normal 24px/40px OptimaNormal;
         letter-spacing: 7.2px;
         margin: 50px;
+    }
+    
+    @media (max-width: 575.98px) { 
+        font: normal normal normal 18px/30px OptimaNormal;
+        letter-spacing: 4.4px;
+        margin: 40px 16px;
     }
     `
 export const ContentSecondTextBlock = styled.div`
