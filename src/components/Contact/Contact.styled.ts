@@ -79,15 +79,39 @@ export const ContactSection = styled.div`
         }
         
         .ao-form-field {
-            background: #889287 !important;
+            background: #889287 ;
             border: none;
             border-radius: 0 !important;
             padding: 20px !important;
-            font: normal normal normal 24px/30px OptimaNormal !important;
+            font: normal normal normal 20px / 26px OptimaNormal !important;
             letter-spacing: 2px;
             color: white;
+            max-width: 440px;
+            
+            &:focus {
+                background: #434B42;
+            }
+            
+            @media (max-width: 991.98px) {
+               font: normal normal normal 16px/22px OptimaNormal;
+            }
         }
         
+        select.ao-form-field {
+            cursor: pointer;
+            position: relative;
+            &:after, &:before {
+                content: '';
+             
+            }
+        }
+        
+        .ao-column.ao-column-4 {
+            width: 30%;
+        }
+        .ao-column.ao-column-4:nth-child(3) {
+            margin-left: auto;
+        }
         .ao-row:nth-child(1) {
         
             @media (max-width: 1199.98px) {
