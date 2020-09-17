@@ -18,14 +18,14 @@ export const ContentFirstBlock = styled.div`
     
     @media (max-width: 1199.98px) {
         align-items: center;
+        height: calc(100vh - 100px);
+        padding: 100px 0 0;
     }
     @media (max-width: 991.98px) {
         flex-direction: column;
         justify-content: center;
         align-items: normal;
          
-        height: calc(100vh - 100px);
-        padding: 100px 0 0;
     }
     
     `
@@ -56,6 +56,8 @@ export const ContentFirstText = styled.p`
     @media (max-width: 1199.98px) {
         padding-left: 40px;
         width: calc(100% - 40px);
+        font: normal normal normal 26px/40px OptimaNormal;
+        letter-spacing: 8px;
     }
     @media (max-width: 991.98px) {
         font: normal normal normal 24px/40px OptimaNormal;

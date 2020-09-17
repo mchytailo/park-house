@@ -9,11 +9,13 @@ export const ContentSecondBlock = styled.div`
     left: 0;
     right: 0;
     
-    @media (max-width: 991.98px) {
-        flex-direction: column;
-        justify-content: center;    
+    @media (max-width: 1199.98px) {
         height: calc(100vh - 100px);
         padding: 100px 0 0;
+    }
+    @media (max-width: 991.98px) {
+        flex-direction: column;
+        justify-content: center;  
     }
     `
 
@@ -62,10 +64,14 @@ export const ContentSecondText = styled.p`
     max-width: 800px;
     margin: 0;
     
+    @media (max-width: 1200px) {
+        font: normal normal normal 26px/40px OptimaNormal;
+        letter-spacing: 8px;
+    }
+    
     @media (max-width: 991.98px) {
         font: normal normal normal 24px/40px OptimaNormal;
         letter-spacing: 7.2px;
-        margin: 50px;
     }
     
     @media (max-width: 575.98px) { 
@@ -86,5 +92,6 @@ export const ContentSecondTextBlock = styled.div`
     @media (max-width: 991.98px) {
         width: 100%;
         height: auto;
+        min-height: 170px;
     }
     `
