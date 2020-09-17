@@ -260,6 +260,31 @@ export const ContactSection = styled.div`
             letter-spacing: 1px;
             margin-top: 4px;
         }
+        
+        
+        
+        .ao-richtext-block{
+            max-width: 550px;
+            margin: 0 auto;
+            p{
+                margin: 0;
+            }
+            p:nth-child(1){
+                margin-bottom: 32px;
+            }
+            p:nth-child(2){
+                font: normal normal normal 18px/50px OptimaNormal;
+                letter-spacing: 5.4px;
+                color: #fff;
+                text-transform: uppercase;
+                margin-bottom: 80px;
+            }
+            p:nth-child(3){
+                font: normal normal normal 25px/40px OptimaNormal;
+                letter-spacing: 0px;
+                color: #fff;
+            }
+        }
     }
     `
 export const ContactText = styled.div`  
