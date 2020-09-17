@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import arrowIcon from "../../assets/images/icon-dropdown-arrow.svg";
 
 export const ContactSection = styled.div`  
     padding: 40px;
@@ -79,7 +80,11 @@ export const ContactSection = styled.div`
         }
         .ao-input-block, .ao-combo-block{
             max-width: 440px;
+            position: relative;
             
+            @media (max-width: 991.98px) {
+                max-width: none;
+            }
             
             .ao-form-error-message {
                 color: red;
@@ -98,6 +103,10 @@ export const ContactSection = styled.div`
             &:focus {
                 background: #434B42;
             }
+            @media (max-width: 1280px) {
+            font: normal normal normal 18px / 24px OptimaNormal !important;
+            padding: 16px !important;
+            }
             @media (max-width: 991.98px) {
                font: normal normal normal 16px/22px OptimaNormal;
             }
@@ -108,7 +117,12 @@ export const ContactSection = styled.div`
         }
         
         .ao-column.ao-column-4 {
-            width: 30% !important;
+            max-width: 500px;
+            
+            @media (max-width: 991.98px) {
+            
+            max-width: none;
+            }
         }
         .ao-column.ao-column-4:nth-child(3) {
             margin-left: auto;
@@ -118,11 +132,14 @@ export const ContactSection = styled.div`
                 cursor: pointer;
                 content: "";
                 position: absolute;
-                width: 10px;
-                background: url(https://mchytailo.github.io/park-house/src/assets/images/icon-dropdown-arrow.svg);
-                right: 50%;
+                width: 16px;
+                height: 10px;
+                background: url(${arrowIcon}) 50% 50%;
+                right: 24px;
                 top: 50%;
-                display: inline-block;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                pointer-events: none;
             }
         }
         .ao-row:nth-child(1) {
@@ -136,14 +153,17 @@ export const ContactSection = styled.div`
                 }
                 
                 .ao-column.ao-column-4:nth-child(3) {
-                    width: 100%;
+                            width: 100% !important;
+    max-width: 1000px;
+    margin: 0;
                     
                     .ao-column-inner {
                         display: flex;
                         flex-direction: row;
+                        justify-content: flex-start;
                         padding: 0;
                         > .ao-block-wrapper {    
-                            width: calc(50% - 30px);
+                            width: 50%;
                         }
                     }
                     
@@ -156,7 +176,7 @@ export const ContactSection = styled.div`
                     width: 100%  !important;
                     &:nth-child(2) {
                         margin-top: 16px;
-                        
+                        max-width: none;
                         .ao-column-inner{
                             display: flex;
                             flex-wrap: wrap;
@@ -312,6 +332,10 @@ export const ContactText = styled.div`
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-bottom: 80px;
+    @media (max-width: 1280px) {
+       font: normal normal normal 24px/32px OptimaNormal;
+       margin-bottom: 64px;
+    }
     @media (max-width: 991.98px) {
        font: normal normal normal 16px/22px OptimaNormal;
        margin-bottom: 40px;
@@ -325,6 +349,10 @@ export const ContactHeader = styled.h2`
     text-transform: uppercase;
     margin-bottom: 70px;
     
+    @media (max-width: 1280px) {
+       normal normal normal 40px/48px Optima;
+       margin-bottom: 34px;
+    }
     @media (max-width: 991.98px) {
        font: normal normal normal 28px/28px OptimaNormal;
        letter-spacing: 7.39px
