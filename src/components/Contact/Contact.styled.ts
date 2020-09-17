@@ -98,15 +98,6 @@ export const ContactSection = styled.div`
             &:focus {
                 background: #434B42;
             }
-            &:after {
-                cursor: pointer;
-                content: '';
-                position: absolute;
-                width: 10px;
-                background: url(https://mchytailo.github.io/park-house/src/assets/images/icon-dropdown-arrow.svg);
-                right: 50%;
-                top: 50%;
-            }
             @media (max-width: 991.98px) {
                font: normal normal normal 16px/22px OptimaNormal;
             }
@@ -121,6 +112,18 @@ export const ContactSection = styled.div`
         }
         .ao-column.ao-column-4:nth-child(3) {
             margin-left: auto;
+        }
+        .ao-column.ao-column-4:nth-child(2) {
+            .ao-combo-block:after{
+                cursor: pointer;
+                content: "";
+                position: absolute;
+                width: 10px;
+                background: url(https://mchytailo.github.io/park-house/src/assets/images/icon-dropdown-arrow.svg);
+                right: 50%;
+                top: 50%;
+                display: inline-block;
+            }
         }
         .ao-row:nth-child(1) {
         
