@@ -30,7 +30,7 @@ export const FooterLogo = styled.img`
 
 export const FooterText = styled.p`
     text-align: left;
-    font: normal normal normal 14px/20px OptimaNormal;
+    font: normal normal normal 14px/20px Optima;
     letter-spacing: 0px;
     color: #797972;
     margin: 0 0 24px 0;

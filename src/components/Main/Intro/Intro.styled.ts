@@ -21,34 +21,34 @@ export const IntroWrapper = styled.div`
 export const IntroText = styled.p`
     margin: 0;
     text-align: left;
-    font: normal normal normal 25px/40px OptimaNormal;
+    font: normal normal normal 25px/40px Optima;
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-bottom: 56px;
     
     @media (max-width: 1280px) {
-        font: normal normal normal 22px/34px OptimaNormal;
+        font: normal normal normal 22px/34px Optima;
         margin-bottom: 40px;
     }
     @media (max-width: 575.98px) { 
-        font: normal normal normal 18px/32px OptimaNormal;
+        font: normal normal normal 18px/32px Optima;
     }
     `
 
 export const IntroLabel = styled.p`
     margin: 0;
     text-align: left;
-    font: normal normal normal 22px/40px OptimaNormal;
+    font: normal normal normal 22px/40px Optima;
     letter-spacing: 5.5px;
     color: #FFFFFF;
     text-transform: uppercase;
     @media (max-width: 1280px) {
-        font: normal normal normal 18px/32px OptimaNormal;
+        font: normal normal normal 18px/32px Optima;
         letter-spacing: 4.5px;
     }
     
     @media (max-width: 575.98px) { 
-        font: normal normal normal 14px/28px OptimaNormal;
+        font: normal normal normal 14px/28px Optima;
         letter-spacing: 2.58px;
     }
     `

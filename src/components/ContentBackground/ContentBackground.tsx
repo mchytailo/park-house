@@ -1,19 +1,25 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, RefObject, useEffect} from 'react';
 import {ContentBackgroundSection} from "./ContentBackground.styled";
 
-const ContentBackground: FC = ({currentProgress, contentMainRef, headerRef}) => {
+interface IProps {
+    currentProgress: number,
+    contentMainRef: RefObject<HTMLDivElement> | null
+    headerRef: RefObject<HTMLDivElement> | null
+}
+
+const ContentBackground: FC<IProps> = ({currentProgress, contentMainRef, headerRef}) => {
     useEffect(() => {
-        let contentMainBlock = contentMainRef.current;
-        let headerBlock = headerRef.current;
+        let contentMainBlock = contentMainRef && contentMainRef.current || null;
+        let headerBlock = headerRef && headerRef.current || null;
         let fixedHeader = document.getElementsByClassName('header-fixed')[0];
         if (currentProgress === 1) {
-            contentMainBlock.style.visibility = 'hidden'
-            fixedHeader.style.visibility = 'hidden'
+            contentMainBlock && (contentMainBlock.style.visibility = 'hidden');
+            fixedHeader.style.visibility = 'hidden';
         } else {
-            contentMainBlock.style.visibility = 'visible'
-            fixedHeader.style.visibility = 'visible'
+            contentMainBlock && (contentMainBlock.style.visibility = 'visible');
+            fixedHeader.style.visibility = 'visible';
         }
-        headerBlock.style.top = String((1 - currentProgress) * (-100)) + '%'
+        headerBlock && (headerBlock.style.top = String((1 - currentProgress) * (-100)) + '%')
     }, [currentProgress])
     return (
         <ContentBackgroundSection

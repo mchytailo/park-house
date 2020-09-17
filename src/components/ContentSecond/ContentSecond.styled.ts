@@ -57,7 +57,7 @@ export const ContentSecondImage = styled.img`
     `
 export const ContentSecondText = styled.p`
     text-align: center;
-    font: normal normal normal 30px/50px OptimaNormal;
+    font: normal normal normal 30px/50px Optima;
     letter-spacing: 9px;
     color: #797972;
     text-transform: uppercase;
@@ -65,17 +65,17 @@ export const ContentSecondText = styled.p`
     margin: 0;
     
     @media (max-width: 1200px) {
-        font: normal normal normal 26px/40px OptimaNormal;
+        font: normal normal normal 26px/40px Optima;
         letter-spacing: 8px;
     }
     
     @media (max-width: 991.98px) {
-        font: normal normal normal 24px/40px OptimaNormal;
+        font: normal normal normal 24px/40px Optima;
         letter-spacing: 7.2px;
     }
     
     @media (max-width: 575.98px) { 
-        font: normal normal normal 18px/30px OptimaNormal;
+        font: normal normal normal 18px/30px Optima;
         letter-spacing: 4.4px;
         margin: 40px 16px;
     }

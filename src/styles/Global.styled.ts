@@ -1,70 +1,34 @@
 import {createGlobalStyle} from "styled-components";
+import OptimaFontBoldttf from '../assets/fonts/optima/Optima Medium.ttf';
 import OptimaFontNormalttf from '../assets/fonts/optima/OPTIMA.ttf';
+import OptimaFontBoldwoff from '../assets/fonts/optima-webfont/Optima Medium.woff';
 import OptimaFontNormalwoff from '../assets/fonts/optima-webfont/OPTIMA.woff';
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
-    font-family: 'OptimaNormal', sans-serif;
+    font-family: 'Optima', sans-serif;
     margin: 0;
     padding: 0;
     background: white;
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
- *{
- 
- }
   
   @font-face {
-        font-family: 'OptimaNormal';
+        font-family: 'Optima';
         src: 
         url(${OptimaFontNormalttf}) format('ttf'),
         url(${OptimaFontNormalwoff}) format('woff');
-        font-weight: 300;
+        font-weight: normal;
         font-style: normal;
     }
-  
-  // .scrollmagic-container .scrollmagic-pin-spacer:nth-child(1){
-  //     padding-top: 0 !important;
-  //     padding-bottom: 0 !important;
-  //     z-index: 1;
-  // }
-  
-    @media (min-width: 576px) { 
-   
+  @font-face {
+        font-family: 'Optima';
+        src: 
+        url(${OptimaFontBoldttf}) format('ttf'),
+        url(${OptimaFontBoldwoff}) format('woff');
+        font-weight: bold;
+        font-style: normal;
     }
-
-    @media (min-width: 768px) { 
-     
-    }
-    
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) { 
-    
-    }
-    
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) { 
-    
-    }
-    
-    @media (max-width: 575.98px) { 
-     
-     }
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { 
-
-}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { 
-
-}
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {
-
-}
 `;
 

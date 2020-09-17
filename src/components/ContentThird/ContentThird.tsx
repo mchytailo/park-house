@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, RefObject, useEffect} from 'react';
 import {
     ContentThirdBlock, ContentThirdBlockMobile,
     ContentThirdHeader, ContentThirdImageBlockWall,
@@ -13,18 +13,25 @@ import {Tween} from 'react-gsap';
 import contentThird1 from '../../assets/images/ContentThird1.png';
 import contentThird2 from './../../assets/images/ContentThird2.png';
 
-const ContentThird: FC = ({currentProgress, windowWidth, contentSecondRef}) => {
+interface IProps {
+    currentProgress: number,
+    contentSecondRef: RefObject<HTMLDivElement> | null,
+    windowWidth: number,
+}
+
+const ContentThird: FC<IProps> = ({currentProgress, windowWidth, contentSecondRef}) => {
     useEffect(() => {
-        let contentSecondImage = contentSecondRef.current.getElementsByClassName('content-second-image-animate')[0];
-        let contentSecondText = contentSecondRef.current.getElementsByClassName('content-second-text-animate')[0];
+        if (contentSecondRef && contentSecondRef.current) {
+            let contentSecondImage = contentSecondRef.current.getElementsByClassName('content-second-image-animate')[0] as HTMLElement;
+            let contentSecondText = contentSecondRef.current.getElementsByClassName('content-second-text-animate')[0] as HTMLElement;
 
-        if (currentProgress >= 0) {
-            contentSecondImage.style.opacity = 1 - currentProgress;
-            contentSecondImage.style.transform ='translateY(' + String(currentProgress * (windowWidth >= 992 ? -150 : -100)) + 'vh)';
+            if (currentProgress >= 0) {
+                contentSecondImage.style.opacity = String(1 - currentProgress);
+                contentSecondImage.style.transform = 'translateY(' + String(currentProgress * (windowWidth >= 992 ? -150 : -100)) + 'vh)';
 
-            contentSecondText.style.opacity = 1 - currentProgress;
-            contentSecondText.style.transform = 'translateY(' + String(currentProgress * (-100)) + 'vh)'
-
+                contentSecondText.style.opacity = String(1 - currentProgress);
+                contentSecondText.style.transform = 'translateY(' + String(currentProgress * (-100)) + 'vh)'
+            }
         }
     }, [currentProgress])
     return (

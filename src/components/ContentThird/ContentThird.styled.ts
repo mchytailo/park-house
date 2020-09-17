@@ -80,25 +80,25 @@ width: 100%;
     `
 export const ContentThirdText = styled.p`
     text-align: left;
-    font: normal normal normal 25px/30px OptimaNormal;
+    font: normal normal normal 25px/30px Optima;
     letter-spacing: 0px;
     color: #797972;
     max-width: 800px;
     margin: 0;
     @media (max-width: 991.98px) {
-        font: normal normal normal 16px/22px OptimaNormal;
+        font: normal normal normal 16px/22px Optima;
     }
     `
 export const ContentThirdHeader = styled.h3`
     text-align: left;
-    font: normal normal normal 25px/31px OptimaNormal;
+    font: normal normal normal 25px/31px Optima;
     letter-spacing: 7.5px;
     color: #000000;
     text-transform: uppercase;
     max-width: 800px;
     margin: 0 0 16px;
     @media (max-width: 991.98px) {
-        font: normal normal normal 20px/20px OptimaNormal;
+        font: normal normal normal 20px/20px Optima;
         letter-spacing: 4.8px;
     }
     `

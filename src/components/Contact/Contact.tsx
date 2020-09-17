@@ -1,8 +1,13 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, RefObject, useEffect} from 'react';
 import {ContactHeader, ContactLine, ContactSection, ContactText} from "./Contact.styled";
 import contactEmbed from './contactEmbed'
 
-const Contact: FC = ({contactRef}) => {
+
+interface IProps {
+    contactRef: RefObject<HTMLDivElement> | null
+}
+
+const Contact: FC<IProps> = ({contactRef}) => {
     useEffect(()=>{
         const script = document.createElement("script");
 

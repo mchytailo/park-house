@@ -44,7 +44,7 @@ export const ContentFirstTextBlock = styled.div`
     `
 export const ContentFirstText = styled.p`
     text-align: left;
-    font: normal normal normal 30px/50px OptimaNormal;
+    font: normal normal normal 30px/50px Optima;
     letter-spacing: 9px;
     color: #797972;
     text-transform: uppercase;
@@ -56,17 +56,17 @@ export const ContentFirstText = styled.p`
     @media (max-width: 1199.98px) {
         padding-left: 40px;
         width: calc(100% - 40px);
-        font: normal normal normal 26px/40px OptimaNormal;
+        font: normal normal normal 26px/40px Optima;
         letter-spacing: 8px;
     }
     @media (max-width: 991.98px) {
-        font: normal normal normal 24px/40px OptimaNormal;
+        font: normal normal normal 24px/40px Optima;
         letter-spacing: 7.2px;
         margin: 0 0 6vh 0;
     }
     
     @media (max-width: 575.98px) { 
-        font: normal normal normal 20px/40px OptimaNormal;
+        font: normal normal normal 20px/40px Optima;
         letter-spacing: 4.4px;
     }
     

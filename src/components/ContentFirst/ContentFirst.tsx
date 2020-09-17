@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, RefObject} from 'react';
 import {Tween} from "react-gsap";
 import {
     ContentFirstBlock,
@@ -9,7 +9,13 @@ import {
 } from "./ContentFirst.styled";
 import contentFirst from "../../assets/images/ContentFirst.png";
 
-const ContentFirst: FC = ({currentProgress, contentFirstRef}) => {
+
+interface IProps {
+    currentProgress: number,
+    contentFirstRef: RefObject<HTMLDivElement> | null
+}
+
+const ContentFirst: FC<IProps> = ({currentProgress, contentFirstRef}) => {
     return (
         <ContentFirstBlock
             style={{

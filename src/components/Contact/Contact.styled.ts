@@ -34,7 +34,7 @@ export const ContactSection = styled.div`
         input[type=checkbox]+span, 
         input[type=radio]+span {
             display: block;
-            font: normal normal bold 16px/24px OptimaNormal;
+            font: normal normal bold 16px/24px Optima;
             letter-spacing: 4.32px;
             padding-left: 30px;
             position: relative;
@@ -42,7 +42,7 @@ export const ContactSection = styled.div`
             color: white;
             @media (min-width: 1300px) { 
                 letter-spacing: 4px;
-                font: normal normal bold 18px/24px OptimaNormal ;
+                font: normal normal bold 18px/24px Optima ;
             }
         }
         
@@ -54,7 +54,7 @@ export const ContactSection = styled.div`
         
         .ao-form-label, .ao-combo-label {
             text-align: left;
-            font: normal normal bold 16px/24px OptimaNormal;
+            font: normal normal bold 16px/24px Optima;
             letter-spacing: 1.3px !important
             color: #fff;
             text-transform: uppercase;
@@ -64,7 +64,7 @@ export const ContactSection = styled.div`
             
             @media (min-width: 1300px) { 
                 letter-spacing: 4px;
-                font: normal normal bold 18px/24px OptimaNormal ;
+                font: normal normal bold 18px/24px Optima ;
             }
         }
         .ao-form-label {
@@ -96,7 +96,7 @@ export const ContactSection = styled.div`
             border: none;
             border-radius: 0 !important;
             padding: 20px !important;
-            font: normal normal normal 20px / 26px OptimaNormal !important;
+            font: normal normal normal 20px / 26px Optima !important;
             letter-spacing: 2px;
             color: white;
             
@@ -104,11 +104,11 @@ export const ContactSection = styled.div`
                 background: #434B42;
             }
             @media (max-width: 1280px) {
-            font: normal normal normal 18px / 24px OptimaNormal !important;
+            font: normal normal normal 18px / 24px Optima !important;
             padding: 16px !important;
             }
             @media (max-width: 991.98px) {
-               font: normal normal normal 16px/22px OptimaNormal;
+               font: normal normal normal 16px/22px Optima;
             }
         }
         
@@ -265,7 +265,7 @@ export const ContactSection = styled.div`
             }
             
             button.ao-form-submit {
-                font: normal normal normal 28px/28px OptimaNormal;
+                font: normal normal normal 28px/28px Optima;
                 letter-spacing: 7.39px;
                 text-transform: uppercase;
                 transition: .2s;
@@ -287,7 +287,7 @@ export const ContactSection = styled.div`
 
         .ao-form-error-message {
             text-align: right;
-            font: 16px / 20px OptimaNormal !important;
+            font: 16px / 20px Optima !important;
             letter-spacing: 1px;
             margin-top: 4px;
         }
@@ -304,23 +304,23 @@ export const ContactSection = styled.div`
                 margin-bottom: 32px;
             }
             p:nth-child(2){
-                font: normal normal normal 18px/50px OptimaNormal;
+                font: normal normal normal 18px/50px Optima;
                 letter-spacing: 5.4px;
                 color: #fff;
                 text-transform: uppercase;
                 margin-bottom: 50px;
                 @media (max-width: 575.98px) { 
-                    font: normal normal normal 16px/40px OptimaNormal;
+                    font: normal normal normal 16px/40px Optima;
                 }
             }
             p:nth-child(3){
-                font: normal normal normal 25px/40px OptimaNormal;
+                font: normal normal normal 25px/40px Optima;
                 letter-spacing: 0px;
                 color: #fff;
                 margin-bottom: 30px;
                 
                 @media (max-width: 575.98px) { 
-                    font: normal normal normal 20px/30px OptimaNormal;
+                    font: normal normal normal 20px/30px Optima;
                 }
             }
         }
@@ -328,22 +328,22 @@ export const ContactSection = styled.div`
     `
 export const ContactText = styled.div`  
     text-align: left;
-    font: normal normal normal 32px/40px OptimaNormal;
+    font: normal normal normal 32px/40px Optima;
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-bottom: 80px;
     @media (max-width: 1280px) {
-       font: normal normal normal 24px/32px OptimaNormal;
+       font: normal normal normal 24px/32px Optima;
        margin-bottom: 64px;
     }
     @media (max-width: 991.98px) {
-       font: normal normal normal 16px/22px OptimaNormal;
+       font: normal normal normal 16px/22px Optima;
        margin-bottom: 40px;
     }
     
     `
 export const ContactHeader = styled.h2`  
-    font: normal normal normal 48px/48px OptimaNormal;
+    font: normal normal normal 48px/48px Optima;
     letter-spacing: 12.67px;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -354,7 +354,7 @@ export const ContactHeader = styled.h2`
        margin-bottom: 34px;
     }
     @media (max-width: 991.98px) {
-       font: normal normal normal 28px/28px OptimaNormal;
+       font: normal normal normal 28px/28px Optima;
        letter-spacing: 7.39px
        margin-bottom: 24px;
     }

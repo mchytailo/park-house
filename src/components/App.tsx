@@ -1,8 +1,7 @@
-import React, {FC, useRef, useState} from 'react';
+import React, {FC, useRef} from 'react';
 import {Controller, Scene} from 'react-scrollmagic';
 import {GlobalStyle} from '../styles/Global.styled';
 import Main from "./Main/Main";
-import {ContentBackgroundSection} from "./ContentFirst/ContentFirst.styled";
 import {Timeline} from "react-gsap";
 import ContentFirst from "./ContentFirst/ContentFirst";
 import ContentSecond from "./ContentSecond/ContentSecond";
@@ -14,19 +13,18 @@ import Header from "./Header/Header";
 import ContentBackground from "./ContentBackground/ContentBackground";
 
 const App: FC = () => {
-    const headerRef = useRef(null)
-    const contentMainRef = useRef(null)
-    const contentFirstRef = useRef(null)
-    const contentSecondRef = useRef(null)
-    const contactRef = useRef(null)
-
+    const headerRef = useRef<HTMLDivElement>(null)
+    const contentMainRef = useRef<HTMLDivElement>(null)
+    const contentFirstRef = useRef<HTMLDivElement>(null)
+    const contentSecondRef = useRef<HTMLDivElement>(null)
+    const contactRef = useRef<HTMLDivElement>(null)
     const windowWidth = window.innerWidth;
-
     return (
         <>
             <Header
                 headerRef={headerRef}
-                contactRef={contactRef}/>
+                contactRef={contactRef}
+            />
             <div className={'scrollmagic-container'}>
                 <GlobalStyle/>
 
@@ -35,11 +33,12 @@ const App: FC = () => {
                         duration={windowWidth > 991.98 || windowWidth < 576 ? '100%' : '30%'}
                         triggerHook={'onLeave'}
                     >
-                        {progress => {
+                        {function (progress: number) {
                             return (
                                 <div>
-                                    <Main progress={progress}
-                                          contentMainRef={contentMainRef}
+                                    <Main
+                                        currentProgress={progress}
+                                        contentMainRef={contentMainRef}
                                     />
                                 </div>
                             );
@@ -50,7 +49,7 @@ const App: FC = () => {
                         triggerHook="onEnter"
                         duration="100%"
                     >
-                        {progress => {
+                        {function (progress: number) {
                             return (
                                 <div style={{height: '100vh'}}>
                                     <ContentBackground
@@ -68,7 +67,7 @@ const App: FC = () => {
                         duration="100%"
                         pin
                     >
-                        {progress => {
+                        {function (progress: number) {
                             return (
                                 <div>
                                     <ContentFirst
@@ -86,7 +85,7 @@ const App: FC = () => {
                         pin
                     >
                         {
-                            progress => {
+                            function (progress: number) {
                                 return (
                                     <div>
                                         <ContentSecond
@@ -104,7 +103,7 @@ const App: FC = () => {
                         triggerHook="1"
                         duration={windowWidth > 991 ? '100%' : '70%'}
                     >
-                        {progress => {
+                        {function (progress: number) {
                             return (
                                 <div style={{position: 'relative'}}>
                                     <ContentThird

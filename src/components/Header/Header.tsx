@@ -1,12 +1,17 @@
-import React, {FC} from 'react';
+import React, {FC, RefObject} from 'react';
 import {HeaderBlock, HeaderLink, HeaderLinkFixed, HeaderLogo, HeaderWrapper} from "./Header.styled";
 import headerLogo from "../../assets/images/logo-PH_lockup.svg";
 
-const Header: FC = ({headerRef, contactRef}) => {
+interface IProps {
+    headerRef: RefObject<HTMLDivElement> | null,
+    contactRef: RefObject<HTMLDivElement> | null
+}
+
+const Header: FC<IProps> = ({headerRef, contactRef}) => {
     const executeScroll = () => contactRef
-        && contactRef.current
+        && contactRef
         && window.scrollTo({
-            top: contactRef.current.offsetTop - 100,
+            top: contactRef && contactRef.current&& contactRef.current.offsetTop - 100 || 0,
         })
 
     return (

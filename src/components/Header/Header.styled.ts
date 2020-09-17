@@ -57,7 +57,7 @@ export const HeaderLogo = styled.img`
     
     `
 export const HeaderLink = styled.span` 
-    font: normal normal normal 18px/55px OptimaNormal;
+    font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
     color: #434B42;
     text-transform: uppercase;
@@ -65,12 +65,12 @@ export const HeaderLink = styled.span`
     cursor: pointer;
     
     @media (max-width: 991.98px) {
-        font: normal normal normal 16px/32px OptimaNormal;
+        font: normal normal normal 16px/32px Optima;
         letter-spacing: 4.8px;
     }
     `
 export const HeaderLinkFixed = styled.span` 
-    font: normal normal normal 18px/55px OptimaNormal;
+    font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
     color: #fff;
     text-transform: uppercase;
@@ -91,7 +91,7 @@ export const HeaderLinkFixed = styled.span`
     
     @media (max-width: 991.98px) {
         top: 78px;
-        font: normal normal normal 16px/16px OptimaNormal;
+        font: normal normal normal 16px/16px Optima;
         letter-spacing: 4.8px;
     }
     

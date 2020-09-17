@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, RefObject} from 'react';
 import {MainBackground, MainBuildingImg, MainSection, MainWrapper} from "./Main.styled";
 import Logo from "./Logo/Logo";
 import {Tween} from "react-gsap";
@@ -6,7 +6,12 @@ import Intro from "./Intro/Intro";
 import contentImage from "../../assets/images/main-building.png";
 import contentImage2 from "../../assets/images/main-building2.png";
 
-const Main: FC = ({progress, contentMainRef}) => {
+interface IProps {
+    currentProgress: number,
+    contentMainRef: RefObject<HTMLDivElement> | null
+}
+
+const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
     return (
         <MainWrapper ref={contentMainRef}>
             <MainSection
@@ -15,7 +20,7 @@ const Main: FC = ({progress, contentMainRef}) => {
                     from={{opacity: 1}}
                     to={{opacity: 0}}
                     paused
-                    totalProgress={progress}
+                    totalProgress={currentProgress}
                 >
                     <div>
                         <Logo/>
@@ -32,7 +37,7 @@ const Main: FC = ({progress, contentMainRef}) => {
                         x: '-40vw'
                     }}
                     paused
-                    totalProgress={progress}
+                    totalProgress={currentProgress}
                 >
                     <div>
                         <Intro/>
@@ -42,20 +47,20 @@ const Main: FC = ({progress, contentMainRef}) => {
 
             </MainSection>
             <MainBackground style={{
-                position: progress === 1 ? 'fixed' : 'relative'
+                position: currentProgress === 1 ? 'fixed' : 'relative'
             }}>
                 <MainBuildingImg
                     src={contentImage}
                     alt=""
                     style={{
-                        opacity: String(1 - progress)
+                        opacity: String(1 - currentProgress)
                     }}
                 />
                 <MainBuildingImg
                     src={contentImage2}
                     alt=""
                     style={{
-                        opacity: String(progress)
+                        opacity: String(currentProgress)
                     }}
                 />
 
