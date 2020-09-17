@@ -277,12 +277,20 @@ export const ContactSection = styled.div`
                 letter-spacing: 5.4px;
                 color: #fff;
                 text-transform: uppercase;
-                margin-bottom: 80px;
+                margin-bottom: 50px;
+                @media (max-width: 575.98px) { 
+                    font: normal normal normal 16px/40px OptimaNormal;
+                }
             }
             p:nth-child(3){
                 font: normal normal normal 25px/40px OptimaNormal;
                 letter-spacing: 0px;
                 color: #fff;
+                margin-bottom: 30px;
+                
+                @media (max-width: 575.98px) { 
+                    font: normal normal normal 20px/30px OptimaNormal;
+                }
             }
         }
     }
