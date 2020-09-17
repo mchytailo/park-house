@@ -42,7 +42,6 @@ const Header: FC = ({headerViewProgress, contactRef}) => {
             }
             <HeaderWrapper>
                 <HeaderBlock
-
                     style={{
                         top: headerViewProgress <= 1
                             ? String((1 - headerViewProgress) * (-100)) + '%'
