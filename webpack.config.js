@@ -28,6 +28,10 @@ module.exports = {
                 test: /\.(jpg|png|svg|webm)$/,
                 use: {
                     loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/'
+                    }
                 },
             },
             {
