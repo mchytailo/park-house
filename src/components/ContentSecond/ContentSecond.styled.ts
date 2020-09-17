@@ -25,7 +25,6 @@ export const ContentSecondImageBlock = styled.div`
     align-items: center;
     overflow: hidden;
     position: relative;
-    transition: .1s;
     
     @media (max-width: 991.98px) {
         width: calc(100% - 32px);
@@ -87,7 +86,6 @@ export const ContentSecondTextBlock = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: .1s;
     
     @media (max-width: 991.98px) {
         width: 100%;

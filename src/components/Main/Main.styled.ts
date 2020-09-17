@@ -24,9 +24,6 @@ export const MainSection = styled.div`
     right: 0;
     left: 0;
     z-index: 10;
-    > div {
-        transition: .1s;
-    }
     
     @media (min-width: 1200px) {
         padding: 128px 140px 200px;

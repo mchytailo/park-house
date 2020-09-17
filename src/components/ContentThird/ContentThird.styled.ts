@@ -6,9 +6,6 @@ export const ContentThirdBlock = styled.div`
     width: 100%;
     height: 100vh;
     padding: 0;
-    > div {
-        transition: .1s;
-    }
     @media (max-width: 991.98px) {
         flex-wrap: wrap;
         height: auto;
@@ -38,7 +35,6 @@ export const ContentThirdImageBlockWall = styled.div`
     bottom: 0;
     right: 0;
     z-index: 1;
-    transition: .1s;
     `
 
 export const ContentThirdSection = styled.div`
@@ -57,7 +53,6 @@ export const ContentThirdSectionLeft = styled.div`
     flex-direction: column;
     justify-content: center;
     > div {
-        transition: .1s;
     }
     
     @media (max-width: 991.98px) {
