@@ -8,6 +8,7 @@ interface IProps {
 }
 
 const Contact: FC<IProps> = ({contactRef}) => {
+
     useEffect(()=>{
         const script = document.createElement("script");
 
@@ -15,7 +16,7 @@ const Contact: FC<IProps> = ({contactRef}) => {
         script.type = 'text/javascript';
         script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0001';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
-    },[])
+    },[contactRef])
 
     return (
         <ContactSection ref={contactRef}>

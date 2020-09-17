@@ -93,10 +93,6 @@ export const ContentFirstImageBlockWall = styled.div`
     bottom: 0;
     right: 0;
     z-index: 1;
-    
-    // @media (max-width: 991.98px) {
-    //     position: fixed;
-    // }
     `
 
 export const ContentFirstImage = styled.img`
