@@ -6,12 +6,10 @@ import Intro from "./Intro/Intro";
 import contentImage from "../../assets/images/main-building.png";
 import contentImage2 from "../../assets/images/main-building2.png";
 
-const Main: FC = ({progress, nextProgress}) => {
+const Main: FC = ({progress, contentMainRef}) => {
     return (
-        <MainWrapper>
+        <MainWrapper ref={contentMainRef}>
             <MainSection
-            style={{visibility: nextProgress < 1 ? 'visible' : 'hidden'}}
-
             >
                 <Tween
                     from={{opacity: 1}}
@@ -44,7 +42,7 @@ const Main: FC = ({progress, nextProgress}) => {
 
             </MainSection>
             <MainBackground style={{
-                position: progress === 1 && nextProgress < 1  ? 'fixed' : 'relative'
+                position: progress === 1 ? 'fixed' : 'relative'
             }}>
                 <MainBuildingImg
                     src={contentImage}

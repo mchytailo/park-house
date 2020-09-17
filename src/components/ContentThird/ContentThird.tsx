@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import {
     ContentThirdBlock, ContentThirdBlockMobile,
     ContentThirdHeader, ContentThirdImageBlockWall,
@@ -13,12 +13,25 @@ import {Tween} from 'react-gsap';
 import contentThird1 from '../../assets/images/ContentThird1.png';
 import contentThird2 from './../../assets/images/ContentThird2.png';
 
-const ContentThird: FC = ({currentProgress, windowWidth}) => {
+const ContentThird: FC = ({currentProgress, windowWidth, contentSecondRef}) => {
+    useEffect(() => {
+        let contentSecondImage = contentSecondRef.current.getElementsByClassName('content-second-image-animate')[0];
+        let contentSecondText = contentSecondRef.current.getElementsByClassName('content-second-text-animate')[0];
+
+        if (currentProgress >= 0) {
+            contentSecondImage.style.opacity = 1 - currentProgress;
+            contentSecondImage.style.transform ='translateY(' + String(currentProgress * (windowWidth >= 992 ? -150 : -100)) + 'vh)';
+
+            contentSecondText.style.opacity = 1 - currentProgress;
+            contentSecondText.style.transform = 'translateY(' + String(currentProgress * (-100)) + 'vh)'
+
+        }
+    }, [currentProgress])
     return (
         <ContentThirdBlock>
             {
                 windowWidth < 992 &&
-            <ContentThirdBlockMobile>
+                <ContentThirdBlockMobile>
                     <Tween
                         from={{opacity: 0}}
                         to={{opacity: 1}}
@@ -36,17 +49,17 @@ const ContentThird: FC = ({currentProgress, windowWidth}) => {
                             <ContentThirdImageLeft src={contentThird1}/>
                         </ContentThirdImageLeftBlock>
                     </Tween>
-            </ContentThirdBlockMobile>
+                </ContentThirdBlockMobile>
             }
             <ContentThirdSectionLeft>
                 {
                     windowWidth > 991 &&
-                <Tween
-                    from={{opacity: 0}}
-                    to={{opacity: 1}}
-                    paused
-                    totalProgress={currentProgress}
-                >
+                    <Tween
+                        from={{opacity: 0}}
+                        to={{opacity: 1}}
+                        paused
+                        totalProgress={currentProgress}
+                    >
                         <ContentThirdImageLeftBlock>
                             <ContentThirdImageBlockWall
                                 style={{
@@ -58,7 +71,7 @@ const ContentThird: FC = ({currentProgress, windowWidth}) => {
                             <ContentThirdImageLeft src={contentThird1}/>
                         </ContentThirdImageLeftBlock>
 
-                </Tween>
+                    </Tween>
                 }
 
                 <Tween

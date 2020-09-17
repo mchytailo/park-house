@@ -9,18 +9,15 @@ import {
 } from "./ContentFirst.styled";
 import contentFirst from "../../assets/images/ContentFirst.png";
 
-const ContentFirst: FC = ({currentProgress, nextProgress, windowWidth}) => {
+const ContentFirst: FC = ({currentProgress, contentFirstRef}) => {
     return (
         <ContentFirstBlock
             style={{
-                visibility: nextProgress < 1
-                    ? 'visible'
-                    : 'hidden',
                 pointerEvents: currentProgress > 0 && currentProgress < 1 ? 'auto' : 'none',
-                transform: nextProgress < 1 && windowWidth < 992
-                    ? ('translateX(-' + (nextProgress * 150) + 'px)')
-                    : ''
-            }}>
+            }}
+            className={'content-first-animate'}
+            ref={contentFirstRef}
+        >
             <Tween
                 from={{opacity: 0}}
                 to={{opacity: 1}}
@@ -28,11 +25,7 @@ const ContentFirst: FC = ({currentProgress, nextProgress, windowWidth}) => {
                 totalProgress={currentProgress}
             >
                 <ContentFirstTextBlock
-                    style={{
-                        opacity: currentProgress === 1
-                            ? String(1 - nextProgress)
-                            : ''
-                    }}
+                    className={'content-first-text-animate'}
                 >
                     <ContentFirstText>
                         Lorem ipsum dolor sit amet, consectetur
@@ -48,21 +41,10 @@ const ContentFirst: FC = ({currentProgress, nextProgress, windowWidth}) => {
                 <ContentFirstImageBlock
                 >
                     <ContentFirstImageBlockWall
-                        style={{
-                            left: currentProgress === 1 && nextProgress !== 1
-                                ? String((1 - nextProgress) * 100) + '%'
-                                : '',
-                            opacity: currentProgress === 1 && nextProgress !== 1
-                                ? String(nextProgress)
-                                : ''
-                        }}
+                        className={'content-first-image-wall-animate'}
                     />
                     <ContentFirstImage src={contentFirst}
-                                       style={{
-                                           opacity: currentProgress === 1
-                                               ? String(1 - nextProgress)
-                                               : ''
-                                       }}
+                                       className={'content-first-image-animate'}
                     />
                 </ContentFirstImageBlock>
             </Tween>

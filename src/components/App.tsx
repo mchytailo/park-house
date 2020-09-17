@@ -11,20 +11,24 @@ import ContentFourth from "./ContentFourth/ContentFourth";
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
+import ContentBackground from "./ContentBackground/ContentBackground";
 
 const App: FC = () => {
-    const [contentSecondState, setContentSecondState] = useState(0)
-    const [contentThirdState, setContentThirdState] = useState(0)
-    const [headerViewProgress, setHeaderViewProgress] = useState(0)
+    const headerRef = useRef(null)
+    const contentMainRef = useRef(null)
+    const contentFirstRef = useRef(null)
+    const contentSecondRef = useRef(null)
     const contactRef = useRef(null)
 
     const windowWidth = window.innerWidth;
 
     return (
         <>
-            <Header headerViewProgress={headerViewProgress} contactRef={contactRef}/>
+            <Header
+                headerRef={headerRef}
+                contactRef={contactRef}/>
             <div className={'scrollmagic-container'}>
-                <GlobalStyle changeBackground={contentSecondState}/>
+                <GlobalStyle/>
 
                 <Controller>
                     <Scene
@@ -35,7 +39,7 @@ const App: FC = () => {
                             return (
                                 <div>
                                     <Main progress={progress}
-                                          nextProgress={headerViewProgress}
+                                          contentMainRef={contentMainRef}
                                     />
                                 </div>
                             );
@@ -47,15 +51,13 @@ const App: FC = () => {
                         duration="100%"
                     >
                         {progress => {
-                            setHeaderViewProgress(progress);
                             return (
                                 <div style={{height: '100vh'}}>
-                                    {contentSecondState < 1 &&
-                                    <ContentBackgroundSection
-                                        style={{
-                                            position: progress === 1 ? 'fixed' : 'relative'
-                                        }}
-                                    />}
+                                    <ContentBackground
+                                        currentProgress={progress}
+                                        contentMainRef={contentMainRef}
+                                        headerRef={headerRef}
+                                    />
                                 </div>
                             )
                         }}
@@ -71,8 +73,7 @@ const App: FC = () => {
                                 <div>
                                     <ContentFirst
                                         currentProgress={progress}
-                                        nextProgress={contentSecondState}
-                                        windowWidth={windowWidth}
+                                        contentFirstRef={contentFirstRef}
                                     />
                                 </div>
                             )
@@ -86,13 +87,13 @@ const App: FC = () => {
                     >
                         {
                             progress => {
-                                setContentSecondState(progress);
                                 return (
                                     <div>
                                         <ContentSecond
                                             currentProgress={progress}
-                                            nextProgress={contentThirdState}
                                             windowWidth={windowWidth}
+                                            contentFirstRef={contentFirstRef}
+                                            contentSecondRef={contentSecondRef}
                                         />
                                     </div>
                                 )
@@ -104,13 +105,12 @@ const App: FC = () => {
                         duration={windowWidth > 991 ? '100%' : '70%'}
                     >
                         {progress => {
-                            setContentThirdState(progress);
                             return (
                                 <div style={{position: 'relative'}}>
                                     <ContentThird
                                         currentProgress={progress}
-                                        nextProgress={contentThirdState}
                                         windowWidth={windowWidth}
+                                        contentSecondRef={contentSecondRef}
                                     />
                                 </div>
                             )

@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {HeaderBlock, HeaderLink, HeaderLinkFixed, HeaderLogo, HeaderWrapper} from "./Header.styled";
 import headerLogo from "../../assets/images/logo-PH_lockup.svg";
 
-const Header: FC = ({headerViewProgress, contactRef}) => {
+const Header: FC = ({headerRef, contactRef}) => {
     const executeScroll = () => contactRef
         && contactRef.current
         && window.scrollTo({
@@ -11,17 +11,13 @@ const Header: FC = ({headerViewProgress, contactRef}) => {
 
     return (
         <>
-            {
-                headerViewProgress !== 1 &&
-                <HeaderLinkFixed onClick={executeScroll}>Contact</HeaderLinkFixed>
-            }
+            <HeaderLinkFixed
+                onClick={executeScroll}
+                className={'header-fixed'}
+            >Contact</HeaderLinkFixed>
             <HeaderWrapper>
                 <HeaderBlock
-                    style={{
-                        top: headerViewProgress <= 1
-                            ? String((1 - headerViewProgress) * (-100)) + '%'
-                            : '0'
-                    }}
+                    ref={headerRef}
                 >
                     <HeaderLogo src={headerLogo}/>
                     <HeaderLink onClick={executeScroll}>Contact</HeaderLink>
