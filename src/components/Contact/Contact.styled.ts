@@ -70,7 +70,7 @@ export const ContactSection = styled.div`
             margin-bottom: 8px;
         }
         
-        .ao-column-inner:nth-child(1){
+        .ao-column-4 .ao-column-inner:nth-child(1){
             padding: 0 10% 0 0;
             
             @media (max-width: 991.98px) {
@@ -121,7 +121,7 @@ export const ContactSection = styled.div`
                 flex-wrap: wrap;
                 
                 .ao-column.ao-column-4 {
-                    width: 50%;
+                    width: 50% !important;
                 }
                 
                 .ao-column.ao-column-4:nth-child(3) {
@@ -142,7 +142,7 @@ export const ContactSection = styled.div`
             @media (max-width: 991.98px) {
             
                 .ao-column.ao-column-4 {
-                    width: 100%;
+                    width: 100%  !important;
                     &:nth-child(2) {
                         margin-top: 16px;
                         
