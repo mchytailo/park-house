@@ -3,8 +3,7 @@ import {MainBackground, MainBuildingImg, MainSection, MainWrapper} from "./Main.
 import Logo from "./Logo/Logo";
 import {Tween} from "react-gsap";
 import Intro from "./Intro/Intro";
-import contentImage from "../../assets/images/main-building.png";
-import contentImage2 from "../../assets/images/main-building2.png";
+import contentImage from "../../assets/images/main-building.jpg";
 
 interface IProps {
     currentProgress: number,
@@ -52,16 +51,6 @@ const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
                 <MainBuildingImg
                     src={contentImage}
                     alt=""
-                    style={{
-                        opacity: String(1 - currentProgress)
-                    }}
-                />
-                <MainBuildingImg
-                    src={contentImage2}
-                    alt=""
-                    style={{
-                        opacity: String(currentProgress)
-                    }}
                 />
 
             </MainBackground>
