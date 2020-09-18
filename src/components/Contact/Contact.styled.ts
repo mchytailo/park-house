@@ -304,13 +304,13 @@ export const ContactSection = styled.div`
                 margin-bottom: 40px;
             }
             p:nth-child(2){
-                font: normal normal normal 30px/41px Optima;
-                letter-spacing: 5.4px;
+                font: normal normal normal 24px/41px Optima;
+                letter-spacing: 2px;
                 color: #fff;
                 text-transform: uppercase;
                 margin-bottom: 50px;
                 @media (max-width: 991.98px) { 
-                    font: normal normal normal 24px/30px Optima;
+                    font: normal normal normal 18px/30px Optima;
                 }
                 @media (max-width: 575.98px) { 
                     font: normal normal normal 16px/20px Optima;
