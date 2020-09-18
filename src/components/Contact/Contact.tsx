@@ -14,7 +14,7 @@ const Contact: FC<IProps> = ({contactRef}) => {
 
         script.innerHTML = contactEmbed;
         script.type = 'text/javascript';
-        script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0001';
+        script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
     },[contactRef])
 
