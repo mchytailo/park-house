@@ -65,6 +65,11 @@ export const HeaderLink = styled.a`
     cursor: pointer;
     text-decoration: none;
     
+    -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
     @media (max-width: 991.98px) {
         font: normal normal normal 16px/32px Optima;
         letter-spacing: 4.8px;
@@ -83,6 +88,11 @@ export const HeaderLinkFixed = styled.a`
     cursor: pointer;
     text-decoration: none;
     
+    -moz-user-select: -moz-none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
     @media (min-width: 1200px) { 
         top: 48px;
     }
