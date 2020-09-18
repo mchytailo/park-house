@@ -295,32 +295,25 @@ export const ContactSection = styled.div`
         
         
         .ao-richtext-block{
-            max-width: 550px;
+            max-width: 1200px;
             margin: 0 auto;
             p{
                 margin: 0;
             }
             p:nth-child(1){
-                margin-bottom: 32px;
+                margin-bottom: 40px;
             }
             p:nth-child(2){
-                font: normal normal normal 18px/50px Optima;
+                font: normal normal normal 30px/41px Optima;
                 letter-spacing: 5.4px;
                 color: #fff;
                 text-transform: uppercase;
                 margin-bottom: 50px;
-                @media (max-width: 575.98px) { 
-                    font: normal normal normal 16px/40px Optima;
+                @media (max-width: 991.98px) { 
+                    font: normal normal normal 24px/30px Optima;
                 }
-            }
-            p:nth-child(3){
-                font: normal normal normal 25px/40px Optima;
-                letter-spacing: 0px;
-                color: #fff;
-                margin-bottom: 30px;
-                
                 @media (max-width: 575.98px) { 
-                    font: normal normal normal 20px/30px Optima;
+                    font: normal normal normal 16px/20px Optima;
                 }
             }
         }
