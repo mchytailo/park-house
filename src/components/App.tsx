@@ -30,7 +30,8 @@ const App: FC = () => {
 
                 <Controller>
                     <Scene
-                        duration={windowWidth > 991.98 || windowWidth < 576 ? '100%' : '30%'}
+                        duration={windowWidth > 991.98 ? '100%' :
+                        windowWidth < 576 ? '70%' : '30%'}
                         triggerHook={'onLeave'}
                     >
                         {function (progress: number) {
@@ -63,8 +64,9 @@ const App: FC = () => {
                     </Scene>
 
                     <Scene
-                        triggerHook="0.99"
+                        triggerHook="1"
                         duration="100%"
+                        offset={windowWidth > 991 ? -300 : -200}
                         pin
                     >
                         {function (progress: number) {
@@ -98,7 +100,7 @@ const App: FC = () => {
                                 )
                             }}
                     </Scene>
-                    <div style={{height: '1200px'}}/>
+                    <div style={{height: windowWidth > 991.98 ? '1200px' :'400px'}}/>
                     <Scene
                         triggerHook="1"
                         duration={windowWidth > 991 ? '100%' : '70%'}

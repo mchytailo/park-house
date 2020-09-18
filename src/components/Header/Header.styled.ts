@@ -56,20 +56,21 @@ export const HeaderLogo = styled.img`
     }
     
     `
-export const HeaderLink = styled.span` 
+export const HeaderLink = styled.a` 
     font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
     color: #434B42;
     text-transform: uppercase;
     opacity: 1;
     cursor: pointer;
+    text-decoration: none;
     
     @media (max-width: 991.98px) {
         font: normal normal normal 16px/32px Optima;
         letter-spacing: 4.8px;
     }
     `
-export const HeaderLinkFixed = styled.span` 
+export const HeaderLinkFixed = styled.a` 
     font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
     color: #fff;
@@ -80,6 +81,7 @@ export const HeaderLinkFixed = styled.span`
     right: 40px;
     z-index: 1000;
     cursor: pointer;
+    text-decoration: none;
     
     @media (min-width: 1200px) { 
         top: 48px;

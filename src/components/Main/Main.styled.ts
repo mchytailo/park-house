@@ -8,7 +8,7 @@ export const MainWrapper = styled.div`
         height: 130vh;
     }
     @media (max-width: 575.98px) { 
-        height: 200vh;
+        height: 170vh;
     }
     `
 export const MainSection = styled.div`
@@ -44,7 +44,7 @@ export const MainBackground = styled.div`
         height: 130vh;
     }
     @media (max-width: 575.98px) { 
-        height: 200vh;
+        height: 170vh;
     }
     `
 
