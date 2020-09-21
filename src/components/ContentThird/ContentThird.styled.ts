@@ -95,6 +95,7 @@ export const ContentThirdHeader = styled.h3`
     @media (max-width: 991.98px) {
         font: normal normal normal 20px/20px Optima;
         letter-spacing: 4.8px;
+        margin: 20px 0 16px;
     }
     `
 export const ContentThirdTextBlock = styled.div`
