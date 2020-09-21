@@ -34,10 +34,13 @@ const Contact: FC<IProps> = ({contactRef}) => {
                 setCounter(count => count + 1)
                 const getForm = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
                 setForm(getForm);
-                if (form)
-                    form.onsubmit = logSubmit;
+                if (getForm)
+                    getForm.addEventListener('submit', event => {
+                        logSubmit();
+                })
 
 
+                console.log('form', getForm)
                 console.log('form', form)
                 console.log('counter', counter)
             }, 1000);
