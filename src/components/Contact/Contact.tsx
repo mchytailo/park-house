@@ -19,7 +19,7 @@ const Contact: FC<IProps> = ({contactRef}) => {
         contactRef?.current?.addEventListener("load", function (event: Event) {
             if (event?.target?.nodeName === "SCRIPT") {
                 console.log('Test load')
-                const form = document.getElementById('aoform-65a7048d-2c63-41a9-86d3-c56af2931016');
+                const form = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
                 form && form.addEventListener('submit', logSubmit);
                 console.log(form,'Test form')
             }
