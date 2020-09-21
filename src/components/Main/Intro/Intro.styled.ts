@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {size} from "../../../styles/Global.styled";
 
 export const IntroWrapper = styled.div`
     display: flex;
@@ -7,14 +8,14 @@ export const IntroWrapper = styled.div`
     padding-left: 170px;
     max-width: 600px;
     transition: .3s;
-    @media (max-width: 1280px) { 
+    @media (max-width: ${size.desktop}) { 
         padding-left: 90px;
     }
-    @media (max-width: 991.98px) {    
+    @media (max-width: ${size.tablet}) {    
         padding-left: 13%;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         padding-left: 0;
     }
     `
@@ -26,11 +27,11 @@ export const IntroText = styled.p`
     color: #FFFFFF;
     margin-bottom: 56px;
     
-    @media (max-width: 1280px) {
+    @media (max-width: ${size.desktop}) {
         font: normal normal normal 22px/34px Optima;
         margin-bottom: 40px;
     }
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         font: normal normal normal 18px/32px Optima;
     }
     `
@@ -42,12 +43,12 @@ export const IntroLabel = styled.p`
     letter-spacing: 5.5px;
     color: #FFFFFF;
     text-transform: uppercase;
-    @media (max-width: 1280px) {
+    @media (max-width: ${size.desktop}) {
         font: normal normal normal 18px/32px Optima;
         letter-spacing: 4.5px;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         font: normal normal normal 14px/28px Optima;
         letter-spacing: 2.58px;
     }

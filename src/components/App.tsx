@@ -27,7 +27,6 @@ const App: FC = () => {
             />
             <div className={'scrollmagic-container'}>
                 <GlobalStyle/>
-
                 <Controller>
                     <Scene
                         duration={windowWidth > 991.98 ? '100%' :
@@ -62,7 +61,6 @@ const App: FC = () => {
                             )
                         }}
                     </Scene>
-
                     <Scene
                         triggerHook="1"
                         duration="100%"
@@ -126,8 +124,9 @@ const App: FC = () => {
                             <ContentFourth/>
                         </Timeline>
                     </Scene>
-                    <Contact contactRef={contactRef}
-                             windowWidth={windowWidth}
+                    <Contact
+                        contactRef={contactRef}
+                        windowWidth={windowWidth}
                     />
                     <Footer/>
                 </Controller>

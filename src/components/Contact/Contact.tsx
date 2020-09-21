@@ -2,7 +2,6 @@ import React, {FC, RefObject, useEffect, useState} from 'react';
 import {ContactHeader, ContactLine, ContactSection, ContactText} from "./Contact.styled";
 import contactEmbed from './contactEmbed'
 
-
 interface IProps {
     contactRef: RefObject<HTMLDivElement> | null,
     windowWidth: number

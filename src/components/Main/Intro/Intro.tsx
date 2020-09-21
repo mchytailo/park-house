@@ -14,7 +14,6 @@ const Intro: FC = () => {
             <IntroLabel>Sales begin early 2021</IntroLabel>
         </IntroWrapper>
     )
-
 }
 
 export default Intro;

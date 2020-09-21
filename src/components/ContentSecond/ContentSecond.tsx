@@ -97,7 +97,6 @@ const ContentSecond: FC<IProps> = ({currentProgress, windowWidth, contentFirstRe
             </Tween>
         </ContentSecondBlock>
     )
-
 }
 
 export default ContentSecond;

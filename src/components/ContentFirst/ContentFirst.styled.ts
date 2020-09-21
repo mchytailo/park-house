@@ -1,12 +1,6 @@
 import styled from "styled-components";
+import {size} from "../../styles/Global.styled";
 
-export const ContentBackgroundSection = styled.div`
-    height: 100vh;
-    background: white;
-    top:0;
-    left: 0;
-    right: 0;
-    `
 export const ContentFirstBlock = styled.div`  
     display: flex;
     height: calc(100vh - 222px);
@@ -16,18 +10,16 @@ export const ContentFirstBlock = styled.div`
     left: 0;
     right: 0;
     
-    @media (max-width: 1199.98px) {
+    @media (max-width: ${size.laptop}) {
         align-items: center;
         height: calc(100vh - 100px);
         padding: 100px 0 0;
     }
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         flex-direction: column;
         justify-content: center;
-        align-items: normal;
-         
+        align-items: normal; 
     }
-    
     `
 
 export const ContentFirstTextBlock = styled.div`
@@ -36,7 +28,7 @@ export const ContentFirstTextBlock = styled.div`
     display: flex;
     align-items: flex-end;
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         width: 100%;
         max-width: 440px;
         height: auto;
@@ -52,36 +44,33 @@ export const ContentFirstText = styled.p`
     padding-left: 80px;
     width: 100%;
     
-    
-    @media (max-width: 1199.98px) {
+    @media (max-width: ${size.laptop}) {
         padding-left: 40px;
         width: calc(100% - 40px);
         font: normal normal normal 26px/40px Optima;
         letter-spacing: 8px;
     }
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         font: normal normal normal 24px/40px Optima;
         letter-spacing: 7.2px;
         margin: 0 0 6vh 0;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         font: normal normal normal 20px/40px Optima;
         letter-spacing: 4.4px;
     }
-    
     `
 export const ContentFirstImageBlock = styled.div`
     width: 67%;
     position: relative;
     overflow: hidden;
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         width: calc(100% - 40px);
         margin-left: auto;
         position: initial;
     }
-    
     `
 
 export const ContentFirstImageBlockWall = styled.div`
@@ -96,7 +85,5 @@ export const ContentFirstImageBlockWall = styled.div`
     `
 
 export const ContentFirstImage = styled.img`
-
-width: 100%;
-
+    width: 100%;
     `

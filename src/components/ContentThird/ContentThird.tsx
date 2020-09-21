@@ -1,11 +1,14 @@
 import React, {FC, RefObject, useEffect} from 'react';
 import {
-    ContentThirdBlock, ContentThirdBlockMobile,
-    ContentThirdHeader, ContentThirdImageBlockWall,
+    ContentThirdBlock,
+    ContentThirdBlockMobile,
+    ContentThirdHeader,
+    ContentThirdImageBlockWall,
     ContentThirdImageLeft,
     ContentThirdImageLeftBlock,
     ContentThirdImageRight,
-    ContentThirdSection, ContentThirdSectionLeft,
+    ContentThirdSection,
+    ContentThirdSectionLeft,
     ContentThirdText,
     ContentThirdTextBlock
 } from './ContentThird.styled';
@@ -28,7 +31,6 @@ const ContentThird: FC<IProps> = ({currentProgress, windowWidth, contentSecondRe
             if (currentProgress >= 0) {
                 contentSecondImage.style.opacity = String(1 - currentProgress);
                 contentSecondImage.style.transform = 'translateY(' + String(currentProgress * (windowWidth >= 992 ? -150 : -100)) + 'vh)';
-
                 contentSecondText.style.opacity = String(1 - currentProgress);
                 contentSecondText.style.transform = 'translateY(' + String(currentProgress * (-100)) + 'vh)'
             }

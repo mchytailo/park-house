@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import {size} from "../../styles/Global.styled";
 
 export const MainWrapper = styled.div`
     height: 200vh;
     position: relative;
 
-    @media (max-width: 991.98px) { 
+    @media (max-width: ${size.tablet}) { 
         height: 130vh;
     }
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         height: 170vh;
     }
     `
@@ -25,12 +26,12 @@ export const MainSection = styled.div`
     left: 0;
     z-index: 10;
     
-    @media (min-width: 1200px) {
+    @media (min-width: ${size.laptop}) {
         padding: 128px 140px 200px;
         height: calc(100% - 328px);
     }
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         padding: 70px 5%;
         height: auto;
         max-height: 500px;
@@ -40,10 +41,10 @@ export const MainBackground = styled.div`
     bottom: 0;    
     width: 100%;
     height: 200vh;
-    @media (max-width: 991.98px) { 
+    @media (max-width: ${size.tablet}) { 
         height: 130vh;
     }
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         height: 170vh;
     }
     `

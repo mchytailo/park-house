@@ -11,7 +11,7 @@ const ContentBackground: FC<IProps> = ({currentProgress, contentMainRef, headerR
     useEffect(() => {
         let contentMainBlock = contentMainRef && contentMainRef.current || null;
         let headerBlock = headerRef && headerRef.current || null;
-        let fixedHeader = document.getElementsByClassName('header-fixed')[0];
+        let fixedHeader = document.getElementsByClassName('header-fixed')[0] as HTMLElement;
         if (currentProgress === 1) {
             contentMainBlock && (contentMainBlock.style.visibility = 'hidden');
             fixedHeader.style.visibility = 'hidden';

@@ -9,7 +9,6 @@ import {
 } from "./ContentFirst.styled";
 import contentFirst from "../../assets/images/ContentFirst.png";
 
-
 interface IProps {
     currentProgress: number,
     contentFirstRef: RefObject<HTMLDivElement> | null
@@ -49,15 +48,14 @@ const ContentFirst: FC<IProps> = ({currentProgress, contentFirstRef}) => {
                     <ContentFirstImageBlockWall
                         className={'content-first-image-wall-animate'}
                     />
-                    <ContentFirstImage src={contentFirst}
-                                       className={'content-first-image-animate'}
+                    <ContentFirstImage
+                        src={contentFirst}
+                        className={'content-first-image-animate'}
                     />
                 </ContentFirstImageBlock>
             </Tween>
-
         </ContentFirstBlock>
     )
-
 }
 
 export default ContentFirst;

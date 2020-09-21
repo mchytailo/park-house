@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import {size} from "../../styles/Global.styled";
 
 export const ContentFourthBlock = styled.div`
     height: 100vh;
     position: relative;
     overflow: hidden;
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         max-height: 700px;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         height: auto;
     }
     `
@@ -20,7 +21,7 @@ export const ContentFourthImage = styled.img`
     bottom: 0;
     width: 100%;
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         min-height: 400px;
     }
     `
@@ -42,16 +43,16 @@ export const ContentFourthText = styled.h3`
     color: #797972;
     text-transform: uppercase;
         
-    @media (max-width: 1200px) {
+    @media (max-width: ${size.laptop}) {
         max-height: 300px;
     }
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         font: normal normal normal 24px/40px Optima;
         letter-spacing: 7.2px;
         padding: 0 44px;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         max-height: none;
         height: auto;
         font: normal normal normal 20px/40px Optima;

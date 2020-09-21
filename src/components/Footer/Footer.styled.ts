@@ -1,26 +1,27 @@
 import styled from "styled-components";
+import {size} from "../../styles/Global.styled";
 
 export const FooterSection = styled.div`
     display: flex;
     flex-direction: column;
     padding: 40px;
     
-    @media (min-width: 1200px) { 
+    @media (min-width: ${size.laptop}) { 
         padding: 56px 100px 28px;
     }
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         padding: 40px 40px 0;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         padding: 40px 16px 0;
     }
     
     `
 
 export const FooterLogoBlock = styled.div`
-margin: 0 0 24px 0;
+    margin: 0 0 24px 0;
     `
 
 export const FooterLogo = styled.img`

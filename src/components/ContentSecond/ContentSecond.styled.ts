@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {size} from "../../styles/Global.styled";
 
 export const ContentSecondBlock = styled.div`  
     display: flex;
@@ -9,11 +10,11 @@ export const ContentSecondBlock = styled.div`
     left: 0;
     right: 0;
     
-    @media (max-width: 1199.98px) {
+    @media (max-width: ${size.laptop}) {
         height: calc(100vh - 100px);
         padding: 100px 0 0;
     }
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         flex-direction: column;
         justify-content: center;  
     }
@@ -26,7 +27,7 @@ export const ContentSecondImageBlock = styled.div`
     overflow: hidden;
     position: relative;
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         width: calc(100% - 32px);
         max-width: 540px;
         height: auto;
@@ -48,7 +49,7 @@ export const ContentSecondImageBlockWall = styled.div`
 export const ContentSecondImage = styled.img`
     width: 100%;
     object-fit: cover;
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         min-height: auto;
         height: 120%;
         object-position: 0 0;
@@ -63,17 +64,17 @@ export const ContentSecondText = styled.p`
     max-width: 800px;
     margin: 0;
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${size.laptop}) {
         font: normal normal normal 26px/40px Optima;
         letter-spacing: 8px;
     }
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         font: normal normal normal 24px/40px Optima;
         letter-spacing: 7.2px;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         font: normal normal normal 18px/30px Optima;
         letter-spacing: 4.4px;
         margin: 40px 16px;
@@ -87,7 +88,7 @@ export const ContentSecondTextBlock = styled.div`
     align-items: center;
     overflow: hidden;
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         width: 100%;
         height: auto;
         min-height: 170px;

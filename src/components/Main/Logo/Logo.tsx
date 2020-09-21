@@ -7,7 +7,6 @@ const Logo: FC = () => {
         <LogoWrapper>
             <LogoIcon src={logoIcon}/>
         </LogoWrapper>
-
     )
 }
 

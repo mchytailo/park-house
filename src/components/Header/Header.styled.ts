@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-
+import {size} from "../../styles/Global.styled";
 
 export const HeaderWrapper = styled.div`  
     height: 60px;
@@ -9,14 +8,14 @@ export const HeaderWrapper = styled.div`
     left: 0;
     right: 0;
     z-index: 10;
-    @media (min-width: 1200px) {  
+    @media (min-width: ${size.laptop}) {  
         height: 100px;
     }
-    @media (max-width: 991.98px) { 
+    @media (max-width: ${size.tablet}) { 
         height: 80px;
     }
-    
     `
+
 export const HeaderBlock = styled.div`  
     display: flex;
     justify-content: space-between;
@@ -30,32 +29,34 @@ export const HeaderBlock = styled.div`
     left: 0;
     right: 0;
     
-    @media (min-width: 1200px) { 
+    @media (min-width: ${size.laptop}) { 
         padding: 0 40px;
         width: calc(100% - 80px);
     }
-    @media (max-width: 991.98px) { 
+    @media (max-width: ${size.tablet}) { 
         padding: 0 40px 20px 24px;
         height: calc(100% - 20px);
         width: calc(100% - 64px);
         align-items: flex-end;
     }
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         padding: 0 24px 20px ;
         width: calc(100% - 40px);
     }
     `
+
 export const HeaderLogo = styled.img` 
     height: auto;
     width: 110px;
-    @media (min-width: 1200px) { 
+    @media (min-width: ${size.laptop}) { 
         width: 140px;
     }
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         width: 110px;
     }
     
     `
+
 export const HeaderLink = styled.a` 
     font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
@@ -64,17 +65,18 @@ export const HeaderLink = styled.a`
     opacity: 1;
     cursor: pointer;
     text-decoration: none;
-    
     -moz-user-select: -moz-none;
-       -khtml-user-select: none;
-       -webkit-user-select: none;
-       -ms-user-select: none;
-       user-select: none;
-    @media (max-width: 991.98px) {
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    @media (max-width: ${size.tablet}) {
         font: normal normal normal 16px/32px Optima;
         letter-spacing: 4.8px;
     }
     `
+
 export const HeaderLinkFixed = styled.a` 
     font: normal normal normal 18px/55px Optima;
     letter-spacing: 5.4px;
@@ -87,32 +89,31 @@ export const HeaderLinkFixed = styled.a`
     z-index: 1000;
     cursor: pointer;
     text-decoration: none;
-    
     -moz-user-select: -moz-none;
-       -khtml-user-select: none;
-       -webkit-user-select: none;
-       -ms-user-select: none;
-       user-select: none;
-    @media (min-width: 1200px) { 
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    @media (min-width: ${size.laptop}) { 
         top: 48px;
     }
     
-    @media (min-width: 1200px) { 
+    @media (min-width: ${size.laptop}) { 
         top: 48px;
     }
     
-    @media (max-width: 991.98px) {
+    @media (max-width: ${size.tablet}) {
         top: 78px;
         font: normal normal normal 16px/16px Optima;
         letter-spacing: 4.8px;
     }
     
-    
-    @media (max-width: 767.98px) { 
+    @media (max-width: ${size.tabletS}) { 
         top: 48px;
     }
     
-    @media (max-width: 575.98px) { 
+    @media (max-width: ${size.mobile}) { 
         top: auto;
         bottom: 40px;
         right: 24px;

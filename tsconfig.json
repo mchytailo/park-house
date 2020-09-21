@@ -39,6 +39,6 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
-    "include": ["./src/index.d.ts"]
+    "include": ["./src/declaration.d.ts"]
   }
 }

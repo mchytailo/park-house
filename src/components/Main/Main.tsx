@@ -13,8 +13,7 @@ interface IProps {
 const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
     return (
         <MainWrapper ref={contentMainRef}>
-            <MainSection
-            >
+            <MainSection>
                 <Tween
                     from={{opacity: 1}}
                     to={{opacity: 0}}
@@ -42,8 +41,6 @@ const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
                         <Intro/>
                     </div>
                 </Tween>
-
-
             </MainSection>
             <MainBackground style={{
                 position: currentProgress === 1 ? 'fixed' : 'relative'
@@ -52,11 +49,8 @@ const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
                     src={contentImage}
                     alt=""
                 />
-
             </MainBackground>
-
         </MainWrapper>)
-
 }
 
 export default Main;
