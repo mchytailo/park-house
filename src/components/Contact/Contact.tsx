@@ -1,4 +1,4 @@
-import React, {FC, RefObject, useEffect} from 'react';
+import React, {FC, RefObject, useEffect, useState} from 'react';
 import {ContactHeader, ContactLine, ContactSection, ContactText} from "./Contact.styled";
 import contactEmbed from './contactEmbed'
 
@@ -8,6 +8,8 @@ interface IProps {
 }
 
 const Contact: FC<IProps> = ({contactRef}) => {
+    const [form, setForm] = useState<HTMLElement | null>(null)
+    const [counter, setCounter] = useState(0)
     useEffect(() => {
         const script = document.createElement("script");
 
@@ -16,14 +18,6 @@ const Contact: FC<IProps> = ({contactRef}) => {
         script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
         console.log('Test 111111')
-        contactRef?.current?.addEventListener("load", function (event: Event) {
-            if (event?.target?.nodeName === "SCRIPT") {
-                console.log('Test load')
-                const form = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
-                form && form.addEventListener('submit', logSubmit);
-                console.log(form,'Test form')
-            }
-        }, true);
     }, [contactRef])
 
     const logSubmit = () => {
@@ -34,11 +28,18 @@ const Contact: FC<IProps> = ({contactRef}) => {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            console.log('This will run every second!');
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
+        console.log('TEST',form, counter)
+
+        if (!form && counter < 20) {
+            const interval = setInterval(() => {
+                setCounter(count => count + 1)
+                const getForm = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
+                setForm(getForm);
+                form && form.current.addEventListener('submit', logSubmit);
+            }, 1000);
+            return () => clearInterval(interval);
+        } else return;
+    }, [form, counter]);
 
     return (
         <ContactSection ref={contactRef}>
