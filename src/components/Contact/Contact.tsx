@@ -20,6 +20,7 @@ const Contact: FC<IProps> = ({contactRef}) => {
     },[contactRef])
 
     const logSubmit = () => {
+        console.log('TEst')
         window.scrollTo({
             top: contactRef && contactRef.current && contactRef.current.offsetTop - 100 || 0,
         })
