@@ -8,7 +8,6 @@ interface IProps {
 }
 
 const Contact: FC<IProps> = ({contactRef}) => {
-
     useEffect(()=>{
         const script = document.createElement("script");
 
@@ -16,7 +15,15 @@ const Contact: FC<IProps> = ({contactRef}) => {
         script.type = 'text/javascript';
         script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
+        const form = document.getElementById('aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016');
+        form && form.addEventListener('submit', logSubmit);
     },[contactRef])
+
+    const logSubmit = () => {
+        window.scrollTo({
+            top: contactRef && contactRef.current && contactRef.current.offsetTop - 100 || 0,
+        })
+    }
 
     return (
         <ContactSection ref={contactRef}>

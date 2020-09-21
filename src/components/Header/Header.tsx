@@ -8,11 +8,9 @@ interface IProps {
 }
 
 const Header: FC<IProps> = ({headerRef, contactRef}) => {
-    const executeScroll = () => contactRef
-        && contactRef
-        && window.scrollTo({
-            top: contactRef && contactRef.current&& contactRef.current.offsetTop - 100 || 0,
-        })
+    const executeScroll = () => window.scrollTo({
+        top: contactRef && contactRef.current && contactRef.current.offsetTop - 100 || 0,
+    })
 
     return (
         <>
