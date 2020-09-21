@@ -31,7 +31,7 @@ const App: FC = () => {
                 <Controller>
                     <Scene
                         duration={windowWidth > 991.98 ? '100%' :
-                        windowWidth < 576 ? '70%' : '30%'}
+                            windowWidth < 576 ? '70%' : '30%'}
                         triggerHook={'onLeave'}
                     >
                         {function (progress: number) {
@@ -100,7 +100,7 @@ const App: FC = () => {
                                 )
                             }}
                     </Scene>
-                    <div style={{height: windowWidth > 991.98 ? '1200px' :'400px'}}/>
+                    <div style={{height: windowWidth > 991.98 ? '1200px' : '400px'}}/>
                     <Scene
                         triggerHook="1"
                         duration={windowWidth > 991 ? '100%' : '70%'}
@@ -126,7 +126,9 @@ const App: FC = () => {
                             <ContentFourth/>
                         </Timeline>
                     </Scene>
-                    <Contact contactRef={contactRef}/>
+                    <Contact contactRef={contactRef}
+                             windowWidth={windowWidth}
+                    />
                     <Footer/>
                 </Controller>
             </div>
