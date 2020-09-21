@@ -38,6 +38,7 @@ export const MainSection = styled.div`
     `
 export const MainBackground = styled.div`
     bottom: 0;    
+    position: relative;
     width: 100%;
     height: 200vh;
     @media (max-width: 991.98px) { 

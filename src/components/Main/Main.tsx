@@ -15,6 +15,9 @@ const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
     return (
         <MainWrapper ref={contentMainRef}>
             <MainSection
+                style={{
+                    position: currentProgress === 1 ? 'relative' : 'fixed'
+                }}
             >
                 <Tween
                     from={{opacity: 1}}
@@ -47,7 +50,7 @@ const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
 
             </MainSection>
             <MainBackground style={{
-                position: currentProgress === 1 ? 'fixed' : 'relative'
+                // position: currentProgress === 1 ? 'fixed' : 'relative'
             }}>
                 <MainBuildingImg
                     src={contentImage}

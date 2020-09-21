@@ -20,14 +20,6 @@ const Header: FC<IProps> = ({headerRef, contactRef}) => {
                 onClick={executeScroll}
                 className={'header-fixed'}
             >Contact</HeaderLinkFixed>
-            <HeaderWrapper>
-                <HeaderBlock
-                    ref={headerRef}
-                >
-                    <HeaderLogo src={headerLogo}/>
-                    <HeaderLink onClick={executeScroll}>Contact</HeaderLink>
-                </HeaderBlock>
-            </HeaderWrapper>
         </>
     )
 }

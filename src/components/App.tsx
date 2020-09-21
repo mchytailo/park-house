@@ -11,6 +11,7 @@ import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import ContentBackground from "./ContentBackground/ContentBackground";
+import {MainWrapper} from "./Main/Main.styled";
 
 const App: FC = () => {
     const headerRef = useRef<HTMLDivElement>(null)
@@ -36,98 +37,36 @@ const App: FC = () => {
                     >
                         {function (progress: number) {
                             return (
-                                <div>
+                                <MainWrapper>
                                     <Main
                                         currentProgress={progress}
                                         contentMainRef={contentMainRef}
                                     />
-                                </div>
+                                </MainWrapper>
                             );
                         }}
                     </Scene>
 
                     <Scene
-                        triggerHook="onEnter"
-                        duration="100%"
+                        duration={'100%'}
+                        triggerHook={'onEnter'}
                     >
                         {function (progress: number) {
-                            return (
-                                <div style={{height: '100vh'}}>
-                                    <ContentBackground
-                                        currentProgress={progress}
-                                        contentMainRef={contentMainRef}
-                                        headerRef={headerRef}
-                                    />
-                                </div>
-                            )
-                        }}
-                    </Scene>
+                            console.log(progress);
+                            if(progress > 0){
+                                contentMainRef.current.style.position = 'fixed';
+                                contentMainRef.current.style.bottom = progress  * 100 + 'vh';
 
-                    <Scene
-                        triggerHook="1"
-                        duration="100%"
-                        offset={windowWidth > 991 ? -300 : -200}
-                        pin
-                    >
-                        {function (progress: number) {
+                            }
                             return (
-                                <div>
-                                    <ContentFirst
-                                        currentProgress={progress}
-                                        contentFirstRef={contentFirstRef}
-                                    />
-                                </div>
-                            )
-                        }}
-                    </Scene>
 
-                    <Scene
-                        triggerHook="0.6"
-                        duration="100%"
-                        pin
-                    >
-                        {
-                            function (progress: number) {
-                                return (
-                                    <div>
-                                        <ContentSecond
-                                            currentProgress={progress}
-                                            windowWidth={windowWidth}
-                                            contentFirstRef={contentFirstRef}
-                                            contentSecondRef={contentSecondRef}
-                                        />
-                                    </div>
-                                )
-                            }}
-                    </Scene>
-                    <div style={{height: windowWidth > 991.98 ? '1200px' :'400px'}}/>
-                    <Scene
-                        triggerHook="1"
-                        duration={windowWidth > 991 ? '100%' : '70%'}
-                    >
-                        {function (progress: number) {
-                            return (
-                                <div style={{position: 'relative'}}>
-                                    <ContentThird
-                                        currentProgress={progress}
-                                        windowWidth={windowWidth}
-                                        contentSecondRef={contentSecondRef}
-                                    />
+                                <div >
+                                    <Contact contactRef={contactRef}/>
+                                    <Footer/>
                                 </div>
-                            )
+                            );
                         }}
                     </Scene>
-                    <div style={{height: windowWidth > 575 ? '200px' : '100px'}}/>
-                    <Scene
-                        duration="200%"
-                        triggerHook="onEnter"
-                    >
-                        <Timeline>
-                            <ContentFourth/>
-                        </Timeline>
-                    </Scene>
-                    <Contact contactRef={contactRef}/>
-                    <Footer/>
                 </Controller>
             </div>
         </>
