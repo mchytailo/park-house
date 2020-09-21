@@ -8,23 +8,37 @@ interface IProps {
 }
 
 const Contact: FC<IProps> = ({contactRef}) => {
-    useEffect(()=>{
+    useEffect(() => {
         const script = document.createElement("script");
 
         script.innerHTML = contactEmbed;
         script.type = 'text/javascript';
         script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
-        const form = document.getElementById('aoform-65a7048d-2c63-41a9-86d3-c56af2931016');
-        form && form.addEventListener('submit', logSubmit);
-    },[contactRef])
+        console.log('Test 111111')
+        contactRef?.current?.addEventListener("load", function (event: Event) {
+            if (event?.target?.nodeName === "SCRIPT") {
+                console.log('Test load')
+                const form = document.getElementById('aoform-65a7048d-2c63-41a9-86d3-c56af2931016');
+                form && form.addEventListener('submit', logSubmit);
+                console.log(form,'Test form')
+            }
+        }, true);
+    }, [contactRef])
 
     const logSubmit = () => {
-        console.log('TEst')
+        console.log('Test logSubmit')
         window.scrollTo({
             top: contactRef && contactRef.current && contactRef.current.offsetTop - 100 || 0,
         })
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            console.log('This will run every second!');
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <ContactSection ref={contactRef}>
