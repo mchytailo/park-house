@@ -15,7 +15,7 @@ const Contact: FC<IProps> = ({contactRef}) => {
         script.type = 'text/javascript';
         script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
-        const form = document.getElementById('aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016');
+        const form = document.getElementById('aoform-65a7048d-2c63-41a9-86d3-c56af2931016');
         form && form.addEventListener('submit', logSubmit);
     },[contactRef])
 
