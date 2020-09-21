@@ -28,7 +28,6 @@ const Contact: FC<IProps> = ({contactRef}) => {
     }
 
     useEffect(() => {
-        console.log('TEST', form, counter)
 
         if (!form && counter < 20) {
             const interval = setInterval(() => {
@@ -36,7 +35,11 @@ const Contact: FC<IProps> = ({contactRef}) => {
                 const getForm = document.getElementById('ao-form-65a7048d-2c63-41a9-86d3-c56af2931016');
                 setForm(getForm);
                 if (form)
-                    form.current.onsubmit = logSubmit;
+                    form.onsubmit = logSubmit;
+
+
+                console.log('form', form)
+                console.log('counter', counter)
             }, 1000);
             return () => clearInterval(interval);
         } else return;
