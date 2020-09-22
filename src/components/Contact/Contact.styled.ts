@@ -164,7 +164,6 @@ export const ContactSection = styled.div`
                 
                 .ao-column.ao-column-4:nth-child(3) {
                     width: 100% !important;
-                    max-width: 1000px;
                     margin: 0;
                     
                     .ao-column-inner {

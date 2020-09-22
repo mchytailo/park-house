@@ -98,10 +98,10 @@ const App: FC = () => {
                                 )
                             }}
                     </Scene>
-                    <div style={{height: windowWidth > 991.98 ? '1200px' : '400px'}}/>
+                    <div style={{height: windowWidth > 991.98 ? '1200px' : '800px'}}/>
                     <Scene
                         triggerHook="1"
-                        offset={-200}
+                        offset={windowWidth > 991.98 ? 0 : -200}
                         duration={windowWidth > 991 ? '100%' : '70%'}
                     >
                         {function (progress: number) {
