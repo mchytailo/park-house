@@ -40,7 +40,7 @@ export const ContactSection = styled.div`
             position: relative;
             cursor: pointer;
             color: white;
-            @media (min-width: ${size.laptop}) { 
+            @media (min-width: 1500px) { 
                 letter-spacing: 4px;
                 font: normal normal bold 18px/24px Optima ;
             }
@@ -54,21 +54,26 @@ export const ContactSection = styled.div`
         
         .ao-form-label, .ao-combo-label {
             text-align: left;
-            font: normal normal bold 16px/24px Optima;
-            letter-spacing: 1.3px !important
+            font: normal normal bold 18px/24px Optima ;
+            letter-spacing: 4px;
             color: #fff;
             text-transform: uppercase;
             white-space: nowrap;
             color: white;
             
-            
-            @media (min-width: ${size.laptop}) { 
+            @media (max-width: 1500px) { 
+                font: normal normal bold 16px/24px Optima;
+                letter-spacing: 1.3px;
+            }
+            @media (max-width: ${size.tablet}) {
                 letter-spacing: 4px;
-                font: normal normal bold 18px/24px Optima ;
             }
         }
         .ao-form-label {
             margin-bottom: 8px;
+            @media (max-width: ${size.tablet}) {
+                margin-bottom: 0;
+            }
         }
         
         .ao-column-4 .ao-column-inner:nth-child(1){
@@ -88,6 +93,12 @@ export const ContactSection = styled.div`
             
             .ao-form-error-message {
                 color: red;
+            }
+        }
+        
+        @media (max-width: ${size.tablet}) {
+            .ao-block-wrapper {
+                padding: 0 !important;
             }
         }
         
@@ -119,7 +130,7 @@ export const ContactSection = styled.div`
         .ao-column.ao-column-4 {
             max-width: 450px;
             
-            @media (max-width: ${size.tablet}) {
+            @media (max-width: ${size.laptop}) {
                 max-width: none;
             }
         }
@@ -176,6 +187,10 @@ export const ContactSection = styled.div`
                     &:nth-child(2) {
                         margin-top: 16px;
                         max-width: none;
+                        
+                        @media (max-width: ${size.tablet}) { 
+                            margin-top: 0;
+                        }
                         .ao-column-inner{
                             display: flex;
                             flex-wrap: wrap;
@@ -205,7 +220,7 @@ export const ContactSection = styled.div`
                         
                         > .ao-block-wrapper {    
                             width: 100%;
-                            margin-top: 20px;
+                            margin-top: 0;
                         }
                     }
                     
@@ -219,6 +234,9 @@ export const ContactSection = styled.div`
                 .ao-combo-block {
                     .ao-form-label {
                         margin-bottom: 24px;
+                        @media (max-width: ${size.tablet}) { 
+                                margin-bottom: 14px;
+                        }
                     }
                     .ao-combo-label {
                         display: flex;
@@ -342,12 +360,13 @@ export const ContactHeader = styled.h2`
     margin-bottom: 70px;
     
     @media (max-width: ${size.laptop}) {
-       normal normal normal 40px/48px Optima;
+       font: normal normal normal 36px/44px Optima;
+       letter-spacing: 7px;
        margin-bottom: 34px;
     }
     @media (max-width: ${size.tablet}) {
        font: normal normal normal 28px/28px Optima;
-       letter-spacing: 7.39px
+       letter-spacing: 5px;
        margin-bottom: 24px;
     }
     `
