@@ -70,8 +70,8 @@ export const ContentSecondText = styled.p`
     }
     
     @media (max-width: ${size.tablet}) {
-        font: normal normal normal 24px/40px Optima;
-        letter-spacing: 7.2px;
+        font: normal normal normal 22px/35px Optima;
+        letter-spacing: 6.2px;
     }
     
     @media (max-width: ${size.mobile}) { 
@@ -81,16 +81,22 @@ export const ContentSecondText = styled.p`
     }
     `
 export const ContentSecondTextBlock = styled.div`
-    width: 67%;
+    width: calc(67% - 80px);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding: 0 40px;
     
     @media (max-width: ${size.tablet}) {
-        width: 100%;
         height: auto;
-        min-height: 170px;
+        min-height: 110px;
+        padding: 40px;
+        width: calc(100% - 80px);
+    }
+    @media (max-width: ${size.mobile}) {
+        width: calc(100% - 60px);
+        padding: 30px;
     }
     `

@@ -19,10 +19,13 @@ export const ContentThirdImageLeftBlock = styled.div`
     align-items: center;
     display: flex;
     position: relative;
-    @media (max-width: ${size.tablet}) {
+    @media (max-width: ${size.laptop}) {
         width: 100%;
         max-width: 480px;
         height: 260px;
+    }
+    @media (max-width: ${size.mobile}) {
+        height: 180px;
     }
     `
 
@@ -54,7 +57,7 @@ export const ContentThirdSectionLeft = styled.div`
     flex-direction: column;
     justify-content: center;
     
-    @media (max-width: ${size.tablet}) {
+    @media (max-width: ${size.laptop}) {
         width: 45%;    
         justify-content: flex-start;
     }
@@ -66,10 +69,11 @@ export const ContentThirdSectionLeft = styled.div`
 
 export const ContentThirdImageRight = styled.img`
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     `
 export const ContentThirdImageLeft = styled.img`
     width: 100%;
-
     `
 export const ContentThirdText = styled.p`
     text-align: left;
@@ -78,6 +82,9 @@ export const ContentThirdText = styled.p`
     color: #797972;
     max-width: 800px;
     margin: 0;
+    @media (max-width: ${size.laptop}) {
+        font: normal normal normal 22px/26px Optima;
+    }
     @media (max-width: ${size.tablet}) {
         font: normal normal normal 16px/22px Optima;
     }
@@ -90,6 +97,10 @@ export const ContentThirdHeader = styled.h3`
     text-transform: uppercase;
     max-width: 800px;
     margin: 0 0 16px;
+    @media (max-width: ${size.laptop}) {
+        font: normal normal normal 22px/25px Optima;
+        letter-spacing: 5.5px;
+    }
     @media (max-width: ${size.tablet}) {
         font: normal normal normal 20px/20px Optima;
         letter-spacing: 4.8px;
@@ -108,4 +119,8 @@ export const ContentThirdTextBlock = styled.div`
 export const ContentThirdBlockMobile = styled.div`
     width: 100%;
     margin-bottom: 50px;
+    @media (max-width: ${size.mobile}) {
+        padding-right: 32px;
+        width: calc(100% - 32px); 
+    }
     `

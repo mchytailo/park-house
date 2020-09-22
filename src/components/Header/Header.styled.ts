@@ -2,18 +2,16 @@ import styled from "styled-components";
 import {size} from "../../styles/Global.styled";
 
 export const HeaderWrapper = styled.div`  
-    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    @media (min-width: ${size.laptop}) {  
-        height: 100px;
-    }
-    @media (max-width: ${size.tablet}) { 
+    height: 100px;
+    @media (max-width: ${size.laptop}) {  
         height: 80px;
     }
+    
     `
 
 export const HeaderBlock = styled.div`  
@@ -21,17 +19,17 @@ export const HeaderBlock = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: calc(100% - 40px);
-    padding: 0 20px;
+    padding: 0 40px;
+    width: calc(100% - 80px);
     background-color: white;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     
-    @media (min-width: ${size.laptop}) { 
-        padding: 0 40px;
-        width: calc(100% - 80px);
+    @media (max-width: ${size.laptop}) { 
+        padding: 0 20px;
+        width: calc(100% - 40px);
     }
     @media (max-width: ${size.tablet}) { 
         padding: 0 40px 20px 24px;
@@ -47,14 +45,10 @@ export const HeaderBlock = styled.div`
 
 export const HeaderLogo = styled.img` 
     height: auto;
-    width: 110px;
-    @media (min-width: ${size.laptop}) { 
-        width: 140px;
+    width: 120px;
+    @media (max-width: ${size.laptop}) { 
+        width: 100px;
     }
-    @media (max-width: ${size.tablet}) {
-        width: 110px;
-    }
-    
     `
 
 export const HeaderLink = styled.a` 

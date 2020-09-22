@@ -28,6 +28,10 @@ export const ContentFirstTextBlock = styled.div`
     display: flex;
     align-items: flex-end;
     
+    @media (max-width: ${size.laptop}) {
+        height: 100%;
+        max-height: 70vh;
+    }
     @media (max-width: ${size.tablet}) {
         width: 100%;
         max-width: 440px;
@@ -43,22 +47,26 @@ export const ContentFirstText = styled.p`
     max-width: 440px;
     padding-left: 80px;
     width: 100%;
-    
+    margin: 0;
     @media (max-width: ${size.laptop}) {
         padding-left: 40px;
         width: calc(100% - 40px);
         font: normal normal normal 26px/40px Optima;
         letter-spacing: 8px;
     }
-    @media (max-width: ${size.tablet}) {
-        font: normal normal normal 24px/40px Optima;
-        letter-spacing: 7.2px;
-        margin: 0 0 6vh 0;
+    @media (max-width: 1025px) {
+        font: normal normal normal 24px/30px Optima;
+        letter-spacing: 6.2px;
+        margin: 0;
     }
     
+    @media (max-width: ${size.tablet}) { 
+        margin: 0 0 6vh 0;
+    }
     @media (max-width: ${size.mobile}) { 
-        font: normal normal normal 20px/40px Optima;
+        font: normal normal normal 20px/35px Optima;
         letter-spacing: 4.4px;
+        max-width: 280px;
     }
     `
 export const ContentFirstImageBlock = styled.div`
@@ -66,10 +74,17 @@ export const ContentFirstImageBlock = styled.div`
     position: relative;
     overflow: hidden;
     
+    @media (max-width: ${size.laptop}) {
+        height: 100%;
+        max-height: 70vh;
+        display: flex;
+        align-items: flex-end;
+    }
     @media (max-width: ${size.tablet}) {
         width: calc(100% - 40px);
         margin-left: auto;
         position: initial;
+        height: auto;
     }
     `
 

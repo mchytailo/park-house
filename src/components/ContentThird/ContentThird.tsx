@@ -91,7 +91,7 @@ const ContentThird: FC<IProps> = ({currentProgress, windowWidth, contentSecondRe
                 >
                     <ContentThirdTextBlock>
                         <ContentThirdHeader>
-                            Lorem ipsum dolor sit amet
+                            Lorem ipsum
                         </ContentThirdHeader>
                         <ContentThirdText>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor

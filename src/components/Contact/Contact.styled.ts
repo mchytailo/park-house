@@ -40,7 +40,7 @@ export const ContactSection = styled.div`
             position: relative;
             cursor: pointer;
             color: white;
-            @media (min-width: ${size.desktop}) { 
+            @media (min-width: ${size.laptop}) { 
                 letter-spacing: 4px;
                 font: normal normal bold 18px/24px Optima ;
             }
@@ -62,7 +62,7 @@ export const ContactSection = styled.div`
             color: white;
             
             
-            @media (min-width: ${size.desktop}) { 
+            @media (min-width: ${size.laptop}) { 
                 letter-spacing: 4px;
                 font: normal normal bold 18px/24px Optima ;
             }
@@ -72,14 +72,14 @@ export const ContactSection = styled.div`
         }
         
         .ao-column-4 .ao-column-inner:nth-child(1){
-            padding: 0 10% 0 0;
+            padding: 0px 50px 0px 0px;
             
             @media (max-width: ${size.tablet}) {
                 padding: 0;
             }
         }
         .ao-input-block, .ao-combo-block{
-            max-width: 440px;
+            max-width: 400px;
             position: relative;
             
             @media (max-width: ${size.tablet}) {
@@ -103,7 +103,7 @@ export const ContactSection = styled.div`
             &:focus {
                 background: #434B42;
             }
-            @media (max-width: ${size.desktop}) {
+            @media (max-width: ${size.laptop}) {
                 font: normal normal normal 18px / 24px Optima !important;
                 padding: 16px !important;
             }
@@ -117,7 +117,7 @@ export const ContactSection = styled.div`
         }
         
         .ao-column.ao-column-4 {
-            max-width: 500px;
+            max-width: 450px;
             
             @media (max-width: ${size.tablet}) {
                 max-width: none;
@@ -324,7 +324,7 @@ export const ContactText = styled.div`
     letter-spacing: 0px;
     color: #FFFFFF;
     margin-bottom: 80px;
-    @media (max-width: ${size.desktop}) {
+    @media (max-width: ${size.laptop}) {
        font: normal normal normal 24px/32px Optima;
        margin-bottom: 64px;
     }
@@ -341,7 +341,7 @@ export const ContactHeader = styled.h2`
     text-transform: uppercase;
     margin-bottom: 70px;
     
-    @media (max-width: ${size.desktop}) {
+    @media (max-width: ${size.laptop}) {
        normal normal normal 40px/48px Optima;
        margin-bottom: 34px;
     }

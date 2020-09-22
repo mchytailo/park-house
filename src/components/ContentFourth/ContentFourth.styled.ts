@@ -45,6 +45,9 @@ export const ContentFourthText = styled.h3`
         
     @media (max-width: ${size.laptop}) {
         max-height: 300px;
+        font: normal normal normal 26px/45px Optima;
+        letter-spacing: 8px;
+        padding: 0 15%;
     }
     @media (max-width: ${size.tablet}) {
         font: normal normal normal 24px/40px Optima;
