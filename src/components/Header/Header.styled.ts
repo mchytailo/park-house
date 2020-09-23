@@ -93,10 +93,6 @@ export const HeaderLinkFixed = styled.a`
         top: 48px;
     }
     
-    @media (min-width: ${size.laptop}) { 
-        top: 48px;
-    }
-    
     @media (max-width: ${size.tablet}) {
         top: 78px;
         font: normal normal normal 16px/16px Optima;
@@ -109,7 +105,10 @@ export const HeaderLinkFixed = styled.a`
     
     @media (max-width: ${size.mobile}) { 
         top: auto;
-        bottom: 40px;
+        bottom: 60px;
         right: 24px;
+     }
+     @media (max-width: ${size.mobileS}) { 
+        bottom: 40px;
      }
     `

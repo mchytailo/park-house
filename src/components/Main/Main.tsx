@@ -13,7 +13,9 @@ interface IProps {
 const Main: FC<IProps> = ({currentProgress, contentMainRef}) => {
     return (
         <MainWrapper ref={contentMainRef}>
-            <MainSection>
+          <MainSection
+            style={{pointerEvents: currentProgress === 1 ? 'none' : 'auto'}}
+          >
                 <Tween
                     from={{opacity: 1}}
                     to={{opacity: 0}}
