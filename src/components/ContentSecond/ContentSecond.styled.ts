@@ -64,13 +64,16 @@ export const ContentSecondText = styled.p`
     max-width: 800px;
     margin: 0;
     
+    @media (max-width: ${size.desktop}) {
+        font: normal normal normal 28px/40px Optima;
+        letter-spacing: 8px;
+    }
     @media (max-width: ${size.laptop}) {
         font: normal normal normal 26px/40px Optima;
-        letter-spacing: 8px;
     }
     
     @media (max-width: ${size.tablet}) {
-        font: normal normal normal 22px/35px Optima;
+        font: normal normal normal 20px/35px Optima;
         letter-spacing: 6.2px;
     }
     

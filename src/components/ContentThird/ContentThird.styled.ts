@@ -82,7 +82,8 @@ export const ContentThirdText = styled.p`
     color: #797972;
     max-width: 800px;
     margin: 0;
-    @media (max-width: ${size.laptop}) {
+    
+    @media (max-width: ${size.desktop}) {
         font: normal normal normal 22px/26px Optima;
     }
     @media (max-width: ${size.tablet}) {
@@ -97,12 +98,15 @@ export const ContentThirdHeader = styled.h3`
     text-transform: uppercase;
     max-width: 800px;
     margin: 0 0 16px;
-    @media (max-width: ${size.laptop}) {
+    @media (max-width: ${size.desktop}) {
         font: normal normal normal 22px/25px Optima;
+        letter-spacing: 6px;
+    }
+    @media (max-width: ${size.laptop}) {
         letter-spacing: 5.5px;
     }
     @media (max-width: ${size.tablet}) {
-        font: normal normal normal 20px/20px Optima;
+        font: normal normal normal 18px/20px Optima;
         letter-spacing: 4.8px;
         margin: 20px 0 16px;
     }

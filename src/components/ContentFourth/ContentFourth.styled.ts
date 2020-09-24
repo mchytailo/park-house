@@ -43,14 +43,18 @@ export const ContentFourthText = styled.h3`
     color: #797972;
     text-transform: uppercase;
         
+    @media (max-width: ${size.desktop}) {
+        font: normal normal normal 28px/40px Optima;
+        letter-spacing: 6px;
+    }
     @media (max-width: ${size.laptop}) {
         max-height: 300px;
-        font: normal normal normal 26px/45px Optima;
+        font: normal normal normal 26px/40px Optima;
         letter-spacing: 8px;
         padding: 0 15%;
     }
     @media (max-width: ${size.tablet}) {
-        font: normal normal normal 24px/40px Optima;
+        font: normal normal normal 22px/30px Optima;
         letter-spacing: 7.2px;
         padding: 0 44px;
     }
@@ -58,7 +62,7 @@ export const ContentFourthText = styled.h3`
     @media (max-width: ${size.mobile}) { 
         max-height: none;
         height: auto;
-        font: normal normal normal 20px/40px Optima;
+        font: normal normal normal 20px/30px Optima;
         letter-spacing: 4.4px;
         padding: 40px 10px;
     }
