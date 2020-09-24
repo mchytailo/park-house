@@ -34,13 +34,13 @@ export const IntroText = styled.p`
     margin-bottom: 56px;
     
      @media (max-width: ${size.desktop}) {
-        font: normal normal normal 20px/34px Optima;
+        font: normal normal normal 20px/30px Optima;
     }
     @media (max-width: ${size.laptop}) {
         margin-bottom: 40px;
     }
     @media (max-width: ${size.mobile}) { 
-        font: normal normal normal 18px/32px Optima;
+        font: normal normal normal 18px/30px Optima;
     }
     `
 

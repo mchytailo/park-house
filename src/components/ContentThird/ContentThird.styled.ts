@@ -84,7 +84,7 @@ export const ContentThirdText = styled.p`
     margin: 0;
     
     @media (max-width: ${size.desktop}) {
-        font: normal normal normal 22px/26px Optima;
+        font: normal normal normal 20px/30px Optima;
     }
     @media (max-width: ${size.tablet}) {
         font: normal normal normal 16px/22px Optima;

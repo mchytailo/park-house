@@ -50,7 +50,7 @@ export const ContentFirstText = styled.p`
     margin: 0;
     @media (max-width: ${size.desktop}) {
         font: normal normal normal 28px/40px Optima;
-        letter-spacing: 8px;
+        letter-spacing: 6px;
         max-width: 420px;
     }
     @media (max-width: ${size.laptop}) {
