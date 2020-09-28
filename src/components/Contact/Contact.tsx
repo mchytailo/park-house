@@ -8,28 +8,32 @@ interface IProps {
 }
 
 const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
-    const [form, setForm] = useState<HTMLElement | null>(null)
-    const [counter, setCounter] = useState(0)
+    const [form, setForm] = useState<HTMLElement | null>(null);
+    const [counter, setCounter] = useState<number>(0);
     useEffect(() => {
         const script = document.createElement("script");
-
         script.innerHTML = contactEmbed;
         script.type = 'text/javascript';
         script.id = 'aoform-script-65a7048d-2c63-41a9-86d3-c56af2931016:d-0004';
         contactRef && contactRef.current && contactRef.current.appendChild(script);
-    }, [contactRef])
+    }, [contactRef]);
 
     const logSubmit = () => {
         const checkErrors = document.getElementsByClassName('ao-form-error').length;
-        if (!checkErrors) {
+        if (!checkErrors && contactRef && contactRef.current) {
             window.scrollTo({
-                top: contactRef && contactRef.current && contactRef.current.offsetTop - 100 || 0,
+                top: contactRef.current.offsetTop - 100 || 0,
             })
+            let contactText = contactRef.current.getElementsByClassName('contact-text')[0] as HTMLElement;
+            let contactLine = contactRef.current.getElementsByClassName('contact-line')[0] as HTMLElement;
+            let contactHeader = contactRef.current.getElementsByClassName('contact-header')[0] as HTMLElement;
+            contactRef.current.removeChild(contactText);
+            contactRef.current.removeChild(contactLine);
+            contactRef.current.removeChild(contactHeader);
         }
-    }
+    };
 
     useEffect(() => {
-
         if (!form && counter < 20 && windowWidth < 992) {
             const interval = setInterval(() => {
                 setCounter(count => count + 1)
@@ -44,19 +48,15 @@ const Contact: FC<IProps> = ({contactRef, windowWidth}) => {
 
     return (
         <ContactSection ref={contactRef}>
-            <ContactText>
+            <ContactText className={'contact-text'}>
                 To stay updated about Parkhouse please register below and we will keep you informed. Thank you.
             </ContactText>
-
-            <ContactLine/>
-
-            <ContactHeader>
+            <ContactLine className={'contact-line'}/>
+            <ContactHeader className={'contact-header'}>
                 REGISTER
             </ContactHeader>
-
         </ContactSection>
     )
-
 }
 
 export default Contact;
