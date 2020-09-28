@@ -29,7 +29,7 @@ export const IntroHeader = styled.p`
     margin: 0;
     text-align: left;
     font: normal normal normal 28px/40px Optima;
-    letter-spacing: 0px;
+    letter-spacing: 6px;
     color: #FFFFFF;
     margin-bottom: 46px;
     
@@ -44,7 +44,7 @@ export const IntroText = styled.p`
     margin: 0;
     text-align: left;
     font: normal normal normal 19px/30px Optima;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     color: #FFFFFF;
     margin-bottom: 56px;
     
